@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>놀만한날 | 전국 축제·문화행사 한눈에</title>
+
+    <meta name="description" content="날짜와 지역, 관심사에 맞춰 전국의 축제와 문화행사를 찾아보는 행사 탐색 서비스.">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <main class="wrap">
+
+        <header class="site-header">
+
+            <h1>놀만한날</h1>
+            
+            <p class="subtitle">
+                그날 뭐 하지?<br>
+                전국의 축제와 문화 행사를 한눈에 찾아보세요.
+            </p>
+
+            <p class="developer">
+                Developed by
+                <a href="https://physxium.github.io/" target="_blank" rel="noopener noreferrer">
+                    Physxium (Han Gyeol Lee) 🔗
+                </a>
+            </p>
+
+        </header>
+
+
+        <div class="tabs">
+        
+            <button class="tab-btn active" type="button" data-tab="festival">
+                행사·축제
+            </button>
+        
+            <button class="tab-btn" type="button" data-tab="culture">
+                공연·전시
+            </button>
+        
+        </div>
+
+
+        <section class="filter-section">
+        
+            <div class="filter-group">
+        
+                <div class="filter-label">
+                    날짜
+                </div>
+        
+                <div class="filters" id="dateFilters">
+        
+                    <button class="filter-btn active" type="button" data-date-filter="all">
+                        전체
+                    </button>
+        
+                    <button class="filter-btn" type="button" data-date-filter="today">
+                        오늘
+                    </button>
+        
+                    <button class="filter-btn" type="button" data-date-filter="weekend">
+                        이번 주말
+                    </button>
+        
+                    <button class="filter-btn" type="button" id="customDateButton" data-date-filter="custom">
+                        날짜 선택
+                    </button>
+        
+                </div>
+        
+                <input type="date" id="customDateInput" class="hidden-date-input" aria-label="날짜 선택">
+        
+            </div>
+        
+        
+            <div class="filter-group">
+        
+                <div class="filter-label">
+                    지역
+                </div>
+        
+                <div class="region-select-wrap">
+        
+                    <select id="regionSelect" class="region-select">
+                        <option value="전체">
+                            전국
+                        </option>
+        
+                        <option value="서울특별시">
+                            서울
+                        </option>
+        
+                        <option value="부산광역시">
+                            부산
+                        </option>
+        
+                        <option value="대구광역시">
+                            대구
+                        </option>
+        
+                        <option value="인천광역시">
+                            인천
+                        </option>
+        
+                        <option value="광주광역시">
+                            광주
+                        </option>
+        
+                        <option value="대전광역시">
+                            대전
+                        </option>
+        
+                        <option value="울산광역시">
+                            울산
+                        </option>
+        
+                        <option value="세종특별자치시">
+                            세종
+                        </option>
+        
+                        <option value="경기도">
+                            경기
+                        </option>
+        
+                        <option value="강원특별자치도">
+                            강원
+                        </option>
+        
+                        <option value="충청북도">
+                            충북
+                        </option>
+        
+                        <option value="충청남도">
+                            충남
+                        </option>
+        
+                        <option value="전북특별자치도">
+                            전북
+                        </option>
+        
+                        <option value="전라남도">
+                            전남
+                        </option>
+        
+                        <option value="경상북도">
+                            경북
+                        </option>
+        
+                        <option value="경상남도">
+                            경남
+                        </option>
+        
+                        <option value="제주특별자치도">
+                            제주
+                        </option>
+        
+                    </select>
+        
+                </div>
+        
+            </div>
+        
+        
+            <div class="filter-group">
+        
+                <div class="filter-label" id="categoryFilterLabel">
+                    관심사
+                </div>
+        
+                <div class="filters" id="categoryFilters"></div>
+        
+            </div>
+        
+        </section>
+
+
+        <section class="results">
+        
+            <div class="result-summary" id="resultSummary">
+                행사를 불러오는 중입니다.
+            </div>
+        
+            <div id="events"></div>
+        
+        </section>
+        
+        
+        <div class="more-wrap" id="moreWrap"></div>
+
+
+        <footer>
+            행사 정보는 한국관광공사와 문화포털 공공데이터를 기반으로 제공합니다.
+        </footer>
+
+    </main>
+
+    <div class="modal-backdrop" id="eventModal" aria-hidden="true">
+        <section class="event-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    
+            <button class="modal-close" id="modalClose" type="button" aria-label="상세 정보 닫기">
+                ×
+            </button>
+    
+            <div id="modalContent"></div>
+    
+        </section>
+    </div>
+
+    <nav class="floating-bar" aria-label="Support">
+
+        <a class="floating-link support" href="https://ctee.kr/place/physxium" target="_blank"
+            rel="noopener noreferrer">
+            유용했다면 ☕ 커피 후원
+        </a>
+
+    </nav>
+
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

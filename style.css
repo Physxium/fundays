@@ -1,0 +1,1250 @@
+:root {
+    color-scheme: light;
+
+    --bg: #f7f6f2;
+
+    --panel: #ffffff;
+    --panel-soft: #f1f0eb;
+
+    --text: #1c1c1e;
+    --muted: #74746f;
+    --muted-soft: #a09f99;
+
+    --line: rgba(60, 60, 67, 0.10);
+    --line-strong: rgba(60, 60, 67, 0.16);
+
+    --accent: #df765a;
+    --accent-soft: #fff0ea;
+    --accent-line: rgba(223, 118, 90, 0.24);
+
+    --shadow:
+        0 5px 20px rgba(57, 48, 39, 0.055);
+}
+
+
+/* ------------------------------
+   Base
+------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    background: var(--bg);
+}
+
+
+body {
+    margin: 0;
+
+    background: var(--bg);
+    color: var(--text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Pretendard",
+        "Segoe UI",
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+button,
+a,
+select,
+input {
+    font: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+button {
+    appearance: none;
+}
+
+
+.wrap {
+    width: min(780px, calc(100% - 28px));
+
+    margin: 0 auto;
+
+    padding:
+        34px 0 110px;
+}
+
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+.site-header {
+    margin-bottom: 24px;
+}
+
+
+h1 {
+    margin:
+        0 0 8px;
+
+    font-size: 27px;
+    font-weight: 780;
+
+    letter-spacing: -0.04em;
+}
+
+
+.subtitle {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.55;
+
+    letter-spacing: -0.015em;
+}
+
+
+.developer {
+    margin:
+        9px 0 0;
+
+    color: var(--muted-soft);
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+
+.developer a {
+    color: var(--muted);
+
+    text-decoration: none;
+
+    transition:
+        color 0.15s ease;
+}
+
+
+.developer a:hover {
+    color: var(--text);
+}
+
+
+/* ------------------------------
+   Tabs
+------------------------------ */
+
+.tabs {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 3px;
+
+    padding: 3px;
+
+    margin:
+        23px 0 20px;
+
+    background:
+        rgba(118, 118, 128, 0.11);
+
+    border-radius: 12px;
+}
+
+
+.tab-btn {
+    border: 0;
+    border-radius: 9px;
+
+    padding:
+        10px 12px;
+
+    background: transparent;
+    color: var(--muted);
+
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+.tab-btn:hover {
+    color: var(--text);
+}
+
+
+.tab-btn.active {
+    background: #ffffff;
+    color: var(--text);
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        0 0 0 0.5px rgba(0, 0, 0, 0.03);
+}
+
+
+/* ------------------------------
+   Filters
+------------------------------ */
+
+.filter-section {
+    margin-bottom: 27px;
+}
+
+
+.filter-group+.filter-group {
+    margin-top: 16px;
+}
+
+
+.filter-label {
+    margin:
+        0 0 8px 2px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    font-weight: 680;
+}
+
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+.filter-btn {
+    border:
+        1px solid var(--line);
+
+    border-radius: 999px;
+
+    padding:
+        7px 12px;
+
+    background: var(--panel);
+    color: var(--muted);
+
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: 560;
+
+    box-shadow:
+        0 1px 3px rgba(30, 25, 20, 0.025);
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.12s ease;
+}
+
+
+.filter-btn:hover {
+    background: var(--panel-soft);
+}
+
+
+.filter-btn:active {
+    transform: scale(0.97);
+}
+
+
+.filter-btn.active {
+    background: var(--accent-soft);
+    color: var(--accent);
+
+    border-color: var(--accent-line);
+
+    font-weight: 700;
+}
+
+
+/* ------------------------------
+   Region Select
+------------------------------ */
+
+.region-select-wrap {
+    position: relative;
+}
+
+
+.region-select {
+    width: 100%;
+
+    padding:
+        10px 38px 10px 13px;
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 12px;
+
+    background: var(--panel);
+    color: var(--text);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 1px 3px rgba(30, 25, 20, 0.025);
+}
+
+
+.region-select:focus {
+    outline: none;
+
+    border-color:
+        var(--accent-line);
+}
+
+
+.region-select-wrap::after {
+    content: "⌄";
+
+    position: absolute;
+
+    right: 13px;
+    top: 50%;
+
+    transform:
+        translateY(-58%);
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    pointer-events: none;
+}
+
+
+/* ------------------------------
+   Hidden Date Input
+------------------------------ */
+
+.hidden-date-input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* ------------------------------
+   Results
+------------------------------ */
+
+.result-summary {
+    margin:
+        0 0 18px 2px;
+
+    font-size: 15px;
+    font-weight: 720;
+
+    letter-spacing: -0.025em;
+}
+
+
+.date-group {
+    margin-top: 26px;
+}
+
+
+.date-group:first-of-type {
+    margin-top: 0;
+}
+
+
+.date-title {
+    margin:
+        0 0 9px 3px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    font-weight: 650;
+}
+
+
+/* ------------------------------
+   Event Card Base
+------------------------------ */
+
+.event-card {
+    margin-bottom: 11px;
+
+    padding:
+        17px 18px 16px;
+
+    background: var(--panel);
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 18px;
+
+    box-shadow:
+        var(--shadow);
+
+    cursor: default;
+}
+
+
+/* ------------------------------
+   Festival Card Interaction
+------------------------------ */
+
+.festival-card {
+    cursor: pointer;
+
+    transition:
+        transform 0.14s ease,
+        box-shadow 0.14s ease,
+        border-color 0.14s ease,
+        background 0.14s ease;
+}
+
+
+.festival-card:hover {
+    transform:
+        translateY(-2px);
+
+    border-color:
+        var(--line-strong);
+
+    box-shadow:
+        0 8px 26px rgba(57, 48, 39, 0.085);
+}
+
+
+.festival-card:active {
+    transform:
+        translateY(0) scale(0.992);
+
+    background:
+        #fcfbf8;
+}
+
+
+.festival-card:focus-visible {
+    outline:
+        2px solid var(--accent);
+
+    outline-offset: 2px;
+}
+
+
+/* ------------------------------
+   Culture Card
+
+   카드 자체는 클릭 대상이 아님
+------------------------------ */
+
+.culture-card {
+    cursor: default;
+}
+
+
+/* ------------------------------
+   Event Card Content
+------------------------------ */
+
+.event-top {
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap: 12px;
+
+    margin-bottom: 9px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    font-weight: 620;
+}
+
+
+.event-region {
+    color: var(--accent);
+
+    font-weight: 700;
+}
+
+
+.event-title {
+    margin:
+        0 0 7px;
+
+    font-size: 18px;
+    line-height: 1.35;
+
+    font-weight: 750;
+
+    letter-spacing: -0.032em;
+}
+
+
+.event-place {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 13px;
+}
+
+
+.tag {
+    padding:
+        5px 8px;
+
+    border-radius: 999px;
+
+    background: var(--panel-soft);
+    color: var(--muted);
+
+    font-size: 10px;
+    font-weight: 650;
+}
+
+
+/* ------------------------------
+   Culture Search
+------------------------------ */
+
+.search-actions {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 7px;
+
+    margin-top: 14px;
+
+    padding-top: 13px;
+
+    border-top:
+        1px solid var(--line);
+}
+
+
+.search-btn {
+    min-height: 41px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 11px;
+
+    background: var(--panel-soft);
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: 650;
+
+    transition:
+        background 0.15s ease,
+        transform 0.12s ease,
+        border-color 0.15s ease;
+}
+
+
+.search-btn:hover {
+    background: #ebe9e3;
+
+    border-color:
+        var(--line-strong);
+}
+
+
+.search-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* ------------------------------
+   More
+------------------------------ */
+
+.more-wrap {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 25px;
+}
+
+
+.more-btn {
+    min-width: 180px;
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 13px;
+
+    padding:
+        11px 18px;
+
+    background: var(--panel);
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    box-shadow:
+        var(--shadow);
+
+    transition:
+        background 0.15s ease,
+        transform 0.12s ease;
+}
+
+
+.more-btn:hover {
+    background: var(--panel-soft);
+}
+
+
+.more-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* ------------------------------
+   Empty
+------------------------------ */
+
+.empty {
+    margin-top: 20px;
+
+    padding:
+        28px 18px;
+
+    background: var(--panel);
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 18px;
+
+    color: var(--muted);
+
+    text-align: center;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+footer {
+    margin-top: 38px;
+
+    color: var(--muted-soft);
+
+    text-align: center;
+
+    font-size: 10px;
+    line-height: 1.65;
+}
+
+
+/* ------------------------------
+   Floating Support
+------------------------------ */
+
+.floating-bar {
+    position: fixed;
+
+    left: 50%;
+
+    bottom:
+        calc(14px + env(safe-area-inset-bottom));
+
+    transform:
+        translateX(-50%);
+
+    width:
+        min(250px,
+            calc(100% - 40px));
+
+    padding: 4px;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border:
+        1px solid var(--line-strong);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 30px rgba(40, 35, 25, 0.12);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    z-index: 1000;
+}
+
+
+.floating-link {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        10px 12px;
+
+    border-radius: 11px;
+
+    color: var(--accent);
+
+    background: var(--accent-soft);
+
+    font-size: 12px;
+    font-weight: 680;
+
+    text-decoration: none;
+
+    transition:
+        background 0.15s ease,
+        transform 0.12s ease;
+}
+
+
+.floating-link:hover {
+    background: #ffe5dc;
+}
+
+
+.floating-link:active {
+    transform: scale(0.97);
+}
+
+
+/* ------------------------------
+   Event Detail Modal
+------------------------------ */
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background:
+        rgba(35, 31, 27, 0.36);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.18s ease,
+        visibility 0.18s ease;
+
+    z-index: 2000;
+}
+
+
+.modal-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.event-modal {
+    position: relative;
+
+    width: min(600px, 100%);
+
+    max-height:
+        min(82vh, 760px);
+
+    overflow-y: auto;
+
+    padding:
+        27px 25px 25px;
+
+    background: var(--panel);
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 60px rgba(30, 25, 20, 0.18);
+
+    transform:
+        translateY(8px) scale(0.985);
+
+    transition:
+        transform 0.18s ease;
+
+    overscroll-behavior: contain;
+}
+
+
+.modal-backdrop.open .event-modal {
+    transform:
+        translateY(0) scale(1);
+}
+
+
+.modal-close {
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: var(--panel-soft);
+    color: var(--muted);
+
+    cursor: pointer;
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        transform 0.12s ease;
+}
+
+
+.modal-close:hover {
+    background: #e9e7e1;
+
+    color: var(--text);
+}
+
+
+.modal-close:active {
+    transform: scale(0.94);
+}
+
+
+.modal-title {
+    margin:
+        0 42px 8px 0;
+
+    font-size: 24px;
+    line-height: 1.35;
+
+    font-weight: 780;
+
+    letter-spacing: -0.04em;
+}
+
+
+.modal-meta {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+.modal-location {
+    margin-top: 12px;
+}
+
+
+.modal-place {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 13px;
+    font-weight: 650;
+
+    line-height: 1.5;
+}
+
+
+.modal-address {
+    margin:
+        3px 0 0;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+
+.modal-tags {
+    margin-top: 15px;
+}
+
+
+.modal-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid var(--line);
+}
+
+
+.modal-info-item {
+    min-width: 0;
+
+    padding:
+        11px 12px;
+
+    background: var(--panel-soft);
+
+    border-radius: 12px;
+}
+
+
+.modal-info-label {
+    margin-bottom: 4px;
+
+    color: var(--muted-soft);
+
+    font-size: 10px;
+    font-weight: 650;
+}
+
+
+.modal-info-value {
+    color: var(--text);
+
+    font-size: 12px;
+    font-weight: 620;
+
+    line-height: 1.45;
+
+    word-break: keep-all;
+}
+
+
+.modal-section {
+    margin-top: 22px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid var(--line);
+}
+
+
+.modal-section-title {
+    margin:
+        0 0 9px;
+
+    font-size: 13px;
+    font-weight: 720;
+}
+
+
+.modal-section-text {
+    margin: 0;
+
+    color: #4e4e4a;
+
+    font-size: 13px;
+    line-height: 1.75;
+
+    white-space: pre-line;
+    word-break: keep-all;
+}
+
+
+.modal-contact {
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid var(--line);
+}
+
+
+.modal-tel {
+    margin:
+        0 0 11px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+.modal-homepage {
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    border-radius: 11px;
+
+    background: var(--accent-soft);
+    color: var(--accent);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.15s ease,
+        transform 0.12s ease;
+}
+
+
+.modal-homepage:hover {
+    background: #ffe5dc;
+}
+
+
+.modal-homepage:active {
+    transform: scale(0.985);
+}
+
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal-homepage-wrap {
+    margin-top: 14px;
+}
+
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+
+@media (max-width: 420px) {
+
+    .wrap {
+        width:
+            min(calc(100% - 24px),
+                780px);
+
+        padding-top: 26px;
+    }
+
+
+    h1 {
+        font-size: 25px;
+    }
+
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+
+    .event-card {
+        padding:
+            16px 15px 15px;
+    }
+
+
+    .event-title {
+        font-size: 17px;
+    }
+
+
+    .floating-bar {
+        width:
+            min(230px,
+                calc(100% - 32px));
+
+        bottom:
+            calc(10px + env(safe-area-inset-bottom));
+    }
+
+
+    /*
+       모바일에서는 Festival hover 효과가
+       불필요하므로 터치에만 반응
+    */
+
+    .festival-card:hover {
+        transform: none;
+
+        border-color:
+            var(--line);
+
+        box-shadow:
+            var(--shadow);
+    }
+
+
+    .festival-card:active {
+        transform: scale(0.992);
+
+        background: #fcfbf8;
+    }
+
+
+    /*
+       Detail Bottom Sheet
+    */
+
+    .modal-backdrop {
+        align-items: flex-end;
+
+        padding:
+            0 0 env(safe-area-inset-bottom);
+    }
+
+
+    .event-modal {
+        width: 100%;
+
+        max-height: 86vh;
+
+        padding:
+            25px 18px 24px;
+
+        border-radius:
+            22px 22px 0 0;
+
+        transform:
+            translateY(25px);
+    }
+
+
+    .modal-backdrop.open .event-modal {
+        transform:
+            translateY(0);
+    }
+
+
+    .modal-title {
+        font-size: 21px;
+    }
+
+
+    .modal-info-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (min-width: 640px) {
+
+    .wrap {
+        padding-top: 42px;
+    }
+
+
+    h1 {
+        font-size: 30px;
+    }
+
+
+    .event-card {
+        padding:
+            19px 21px 18px;
+    }
+
+
+    .event-title {
+        font-size: 19px;
+    }
+
+}

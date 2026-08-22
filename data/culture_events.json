@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-22T11:58:27",
+  "updated_at": "2026-08-22T03:20:12",
   "range": {
     "start": "2026-08-22",
     "end": "2026-11-22"
   },
-  "count": 1096,
+  "count": 1094,
   "events": [
     {
       "id": "388931",
@@ -3031,18 +3031,6 @@
       "source": "culture"
     },
     {
-      "id": "391003",
-      "title": "[부산] WHO DONE IT: 후던잇",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-07-29",
-      "end_date": "2026-08-30",
-      "region": "부산광역시",
-      "city": "수영구",
-      "place": "어댑터플레이스",
-      "source": "culture"
-    },
-    {
       "id": "390325",
       "title": "ACC 뉴스트(NEWST) 작가 공모전 Ⅳ《남겨진 밤》",
       "type": "전시",
@@ -5392,18 +5380,6 @@
       "region": "충청북도",
       "city": "청주시",
       "place": "청주시립미술관",
-      "source": "culture"
-    },
-    {
-      "id": "386273",
-      "title": "[대학로] 소년의 초상",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-07-28",
-      "end_date": "2026-10-18",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "티오엠씨어터(구. 문화공간필링) 2관",
       "source": "culture"
     },
     {

@@ -22,7 +22,7 @@ raw_api_key = os.getenv("TOUR_API_KEY", "")
 if not raw_api_key:
     raise ValueError(
         "TOUR_API_KEY가 없습니다. "
-        ".env 파일에 TOUR_API_KEY=발급받은키 형태로 입력하세요."
+        ".env 파일 또는 GitHub Secret을 확인하세요."
     )
 
 API_KEY = unquote(raw_api_key)
@@ -45,10 +45,13 @@ INTRO_URL = f"{BASE_URL}/detailIntro2"
 
 NUM_OF_ROWS = 100
 
-# API를 너무 빠르게 연속 호출하지 않도록 약간 쉬기
-REQUEST_DELAY = 0.05
+REQUEST_DELAY = 0.25
+
+MAX_RETRIES = 4
+RETRY_DELAYS = [2, 4, 8, 16]
 
 OUTPUT_PATH = "data/events.json"
+TEMP_PATH = "data/events.tmp.json"
 
 
 # =========================================================
@@ -152,58 +155,125 @@ TAG_RULES = {
 
 
 # =========================================================
-# 5. 공통 API 호출
+# 5. 기존 JSON 읽기
+# =========================================================
+
+def load_existing_events():
+
+    if not os.path.exists(OUTPUT_PATH):
+        return []
+
+    try:
+        with open(
+            OUTPUT_PATH,
+            "r",
+            encoding="utf-8",
+        ) as file:
+            data = json.load(file)
+
+        events = data.get("events", [])
+
+        if isinstance(events, list):
+            return events
+
+    except (
+        OSError,
+        json.JSONDecodeError,
+    ) as error:
+        print(
+            f"기존 JSON 읽기 실패: {error}"
+        )
+
+    return []
+
+
+# =========================================================
+# 6. API 호출
 # =========================================================
 
 def request_api(url, params):
-    try:
-        response = requests.get(
-            url,
-            params=params,
-            timeout=30,
-        )
 
-        response.raise_for_status()
+    last_error = None
 
-    except requests.RequestException as error:
-        print(f"API 요청 실패: {error}")
-        return None
+    for attempt in range(
+        1,
+        MAX_RETRIES + 1,
+    ):
 
-    try:
-        data = response.json()
-
-    except ValueError:
-        print("JSON 변환 실패")
-        return None
-
-    # 일반적인 TourAPI 응답
-    if "response" in data:
-        header = data.get("response", {}).get("header", {})
-
-        result_code = header.get("resultCode")
-
-        if result_code != "0000":
-            print(
-                "TourAPI 오류:",
-                result_code,
-                header.get("resultMsg"),
+        try:
+            response = requests.get(
+                url,
+                params=params,
+                timeout=30,
             )
-            return None
 
-    # 일부 오류 응답 형태 대응
-    elif data.get("resultCode"):
-        print(
-            "TourAPI 오류:",
-            data.get("resultCode"),
-            data.get("resultMsg"),
-        )
-        return None
+            response.raise_for_status()
 
-    return data
+            data = response.json()
+
+            if "response" in data:
+
+                header = (
+                    data
+                    .get("response", {})
+                    .get("header", {})
+                )
+
+                result_code = (
+                    header.get("resultCode")
+                )
+
+                if result_code != "0000":
+                    raise RuntimeError(
+                        "TourAPI 오류: "
+                        f"{result_code} / "
+                        f"{header.get('resultMsg')}"
+                    )
+
+            elif data.get("resultCode"):
+
+                raise RuntimeError(
+                    "TourAPI 오류: "
+                    f"{data.get('resultCode')} / "
+                    f"{data.get('resultMsg')}"
+                )
+
+            return data
+
+        except (
+            requests.RequestException,
+            ValueError,
+            RuntimeError,
+        ) as error:
+
+            last_error = error
+
+            print(
+                f"API 요청 실패 "
+                f"({attempt}/{MAX_RETRIES}): "
+                f"{error}"
+            )
+
+            if attempt < MAX_RETRIES:
+
+                delay = RETRY_DELAYS[
+                    attempt - 1
+                ]
+
+                print(
+                    f"{delay}초 후 재시도..."
+                )
+
+                time.sleep(delay)
+
+    raise RuntimeError(
+        "API 요청이 반복 실패했습니다: "
+        f"{last_error}"
+    )
 
 
 # =========================================================
-# 6. 공통 파라미터
+# 7. 공통 파라미터
 # =========================================================
 
 COMMON_PARAMS = {
@@ -215,10 +285,11 @@ COMMON_PARAMS = {
 
 
 # =========================================================
-# 7. 시/도 추출
+# 8. 지역
 # =========================================================
 
 def extract_region(address):
+
     if not address:
         return ""
 
@@ -228,45 +299,38 @@ def extract_region(address):
         return ""
 
     first = parts[0]
-    second = parts[1] if len(parts) > 1 else ""
+    second = (
+        parts[1]
+        if len(parts) > 1
+        else ""
+    )
 
-    # 일반적인 축약/비표준 표기 보정
     aliases = {
         "서울": "서울특별시",
         "서울특별": "서울특별시",
-
         "부산": "부산광역시",
         "대구": "대구광역시",
         "인천": "인천광역시",
         "광주": "광주광역시",
         "대전": "대전광역시",
         "울산": "울산광역시",
-
         "세종": "세종특별자치시",
-
         "경기": "경기도",
-
         "강원": "강원특별자치도",
-
         "충북": "충청북도",
         "충남": "충청남도",
-
         "전북": "전북특별자치도",
         "전남": "전라남도",
-
         "경북": "경상북도",
         "경남": "경상남도",
-
         "제주": "제주특별자치도",
     }
 
     if first in aliases:
         return aliases[first]
 
-    # 현재 TourAPI에서 발견된 특이 표기
     if first == "전남광주통합특별시":
 
-        # 광주광역시의 5개 자치구
         gwangju_districts = {
             "동구",
             "서구",
@@ -278,10 +342,8 @@ def extract_region(address):
         if second in gwangju_districts:
             return "광주광역시"
 
-        # 여수시, 목포시, 무안군, 고흥군 등
         return "전라남도"
 
-    # 광역시·도 없이 도시명부터 시작하는 예외
     city_to_region = {
         "포항시": "경상북도",
     }
@@ -289,7 +351,6 @@ def extract_region(address):
     if first in city_to_region:
         return city_to_region[first]
 
-    # 이미 정상적인 시·도라면 그대로 사용
     valid_regions = {
         "서울특별시",
         "부산광역시",
@@ -313,16 +374,15 @@ def extract_region(address):
     if first in valid_regions:
         return first
 
-    # 모르는 형태는 일단 원본 첫 단어 유지
     return first
 
 
 # =========================================================
-# 8. 날짜 형식 변환
-# 20260820 → 2026-08-20
+# 9. 날짜
 # =========================================================
 
 def format_date(date_string):
+
     if not date_string:
         return ""
 
@@ -332,17 +392,20 @@ def format_date(date_string):
             "%Y%m%d",
         )
 
-        return parsed.strftime("%Y-%m-%d")
+        return parsed.strftime(
+            "%Y-%m-%d"
+        )
 
     except ValueError:
         return date_string
 
 
 # =========================================================
-# 9. 태그용 텍스트 정리
+# 10. 태그
 # =========================================================
 
 def normalize_text(value):
+
     if not value:
         return ""
 
@@ -357,14 +420,8 @@ def normalize_text(value):
     return value.strip()
 
 
-# =========================================================
-# 10. 태그 자동 생성
-# =========================================================
-
 def generate_tags(event):
 
-    # 제목과 개요:
-    # 행사의 핵심 성격을 판단할 때 사용
     main_text = normalize_text(
         " ".join([
             event.get("title", ""),
@@ -372,13 +429,8 @@ def generate_tags(event):
         ])
     )
 
-    # 프로그램:
-    # 체험, 야간, 전통 등 부가 성격 판단에 사용
     program_text = normalize_text(
-        event.get(
-            "program",
-            "",
-        )
+        event.get("program", "")
     )
 
     all_text = (
@@ -391,28 +443,21 @@ def generate_tags(event):
 
     for tag, keywords in TAG_RULES.items():
 
-        # 먹거리 / 마켓 / 공연은
-        # 단순 부대 프로그램 때문에
-        # 과도하게 붙는 것을 방지
         if tag in {
             "먹거리",
             "마켓",
             "공연",
         }:
             target_text = main_text
-
         else:
             target_text = all_text
 
-        matched = any(
+        if any(
             keyword.lower() in target_text
             for keyword in keywords
-        )
-
-        if matched:
+        ):
             tags.append(tag)
 
-    # 어떤 태그에도 해당하지 않는 경우
     if not tags:
         tags.append("기타")
 
@@ -423,11 +468,15 @@ def generate_tags(event):
 # 11. 행사 목록 전체 수집
 # =========================================================
 
-def fetch_all_festivals(start_date, end_date):
+def fetch_all_festivals(
+    start_date,
+    end_date,
+):
 
     all_items = []
 
     page = 1
+    total_count = None
 
     while True:
 
@@ -441,7 +490,8 @@ def fetch_all_festivals(start_date, end_date):
         }
 
         print(
-            f"행사 목록 페이지 {page} 조회 중..."
+            f"행사 목록 페이지 "
+            f"{page} 조회 중..."
         )
 
         data = request_api(
@@ -449,15 +499,23 @@ def fetch_all_festivals(start_date, end_date):
             params,
         )
 
-        if not data:
-            break
+        body = (
+            data["response"]["body"]
+        )
 
-        body = data["response"]["body"]
-
-        total_count = body.get(
+        current_total = body.get(
             "totalCount",
             0,
         )
+
+        if total_count is None:
+
+            total_count = current_total
+
+            print(
+                f"전체 검색 결과: "
+                f"{total_count}건"
+            )
 
         items_container = (
             body.get("items")
@@ -469,25 +527,35 @@ def fetch_all_festivals(start_date, end_date):
             or []
         )
 
-        if isinstance(
-            items,
-            dict,
-        ):
+        if isinstance(items, dict):
             items = [items]
 
         if not items:
+
+            if (
+                total_count
+                and len(all_items)
+                < total_count
+            ):
+                raise RuntimeError(
+                    "목록 수집이 중간에 "
+                    "비정상적으로 종료되었습니다."
+                )
+
             break
 
-        all_items.extend(
-            items
-        )
+        all_items.extend(items)
 
         print(
             f"  {len(all_items)} / "
             f"{total_count}건 수집"
         )
 
-        if len(all_items) >= total_count:
+        if (
+            total_count is not None
+            and len(all_items)
+            >= total_count
+        ):
             break
 
         page += 1
@@ -496,11 +564,26 @@ def fetch_all_festivals(start_date, end_date):
             REQUEST_DELAY
         )
 
+    if total_count is None:
+        raise RuntimeError(
+            "TourAPI totalCount를 "
+            "확인할 수 없습니다."
+        )
+
+    if len(all_items) < total_count:
+
+        raise RuntimeError(
+            "TourAPI 목록이 "
+            "완전히 수집되지 않았습니다. "
+            f"{len(all_items)} / "
+            f"{total_count}"
+        )
+
     return all_items
 
 
 # =========================================================
-# 12. detailCommon2
+# 12. 상세 API
 # =========================================================
 
 def fetch_common_detail(content_id):
@@ -515,9 +598,6 @@ def fetch_common_detail(content_id):
         params,
     )
 
-    if not data:
-        return {}
-
     body = data["response"]["body"]
 
     items_container = (
@@ -530,10 +610,7 @@ def fetch_common_detail(content_id):
         or []
     )
 
-    if isinstance(
-        items,
-        dict,
-    ):
+    if isinstance(items, dict):
         return items
 
     if (
@@ -544,10 +621,6 @@ def fetch_common_detail(content_id):
 
     return {}
 
-
-# =========================================================
-# 13. detailIntro2
-# =========================================================
 
 def fetch_intro_detail(
     content_id,
@@ -565,9 +638,6 @@ def fetch_intro_detail(
         params,
     )
 
-    if not data:
-        return {}
-
     body = data["response"]["body"]
 
     items_container = (
@@ -580,10 +650,7 @@ def fetch_intro_detail(
         or []
     )
 
-    if isinstance(
-        items,
-        dict,
-    ):
+    if isinstance(items, dict):
         return items
 
     if (
@@ -596,7 +663,7 @@ def fetch_intro_detail(
 
 
 # =========================================================
-# 14. 내부 데이터 형태로 정규화
+# 13. 신규 행사 정규화
 # =========================================================
 
 def normalize_event(
@@ -633,10 +700,7 @@ def normalize_event(
 
         "title": (
             common.get("title")
-            or basic.get(
-                "title",
-                "",
-            )
+            or basic.get("title", "")
         ),
 
         "start_date": format_date(
@@ -698,32 +762,157 @@ def normalize_event(
 
         "tel": (
             common.get("tel")
-            or basic.get(
-                "tel",
-                "",
-            )
+            or basic.get("tel", "")
         ),
 
-        "category_codes": (
-            category_codes
-        ),
+        "category_codes":
+            category_codes,
 
         "tags": [],
 
         "source": "tourapi",
     }
 
-    # 모든 필드가 만들어진 뒤
-    # 규칙 기반 태그 생성
-    event["tags"] = generate_tags(
-        event
+    event["tags"] = (
+        generate_tags(event)
     )
 
     return event
 
 
 # =========================================================
-# 15. 메인 실행
+# 14. 기존 행사에 목록 정보 반영
+# =========================================================
+
+def refresh_existing_event(
+    existing,
+    basic,
+):
+
+    event = dict(existing)
+
+    title = basic.get(
+        "title",
+        "",
+    )
+
+    start_date = format_date(
+        basic.get(
+            "eventstartdate",
+            "",
+        )
+    )
+
+    end_date = format_date(
+        basic.get(
+            "eventenddate",
+            "",
+        )
+    )
+
+    address = basic.get(
+        "addr1",
+        "",
+    )
+
+    tel = basic.get(
+        "tel",
+        "",
+    )
+
+    if title:
+        event["title"] = title
+
+    if start_date:
+        event["start_date"] = start_date
+
+    if end_date:
+        event["end_date"] = end_date
+
+    if address:
+
+        event["address"] = address
+
+        event["region"] = (
+            extract_region(address)
+        )
+
+    if tel:
+        event["tel"] = tel
+
+    event["tags"] = (
+        generate_tags(event)
+    )
+
+    return event
+
+
+# =========================================================
+# 15. 안전성 검사
+# =========================================================
+
+def validate_result(
+    new_events,
+    old_events,
+):
+
+    if not new_events:
+
+        raise RuntimeError(
+            "최종 행사 수가 0건입니다. "
+            "기존 JSON을 보존합니다."
+        )
+
+    old_count = len(old_events)
+    new_count = len(new_events)
+
+    if (
+        old_count >= 20
+        and new_count
+        < old_count * 0.5
+    ):
+
+        raise RuntimeError(
+            "행사 수가 비정상적으로 "
+            "급감했습니다. "
+            f"기존 {old_count}건 → "
+            f"신규 {new_count}건. "
+            "저장을 취소합니다."
+        )
+
+
+# =========================================================
+# 16. 안전 저장
+# =========================================================
+
+def save_output(output):
+
+    os.makedirs(
+        "data",
+        exist_ok=True,
+    )
+
+    with open(
+        TEMP_PATH,
+        "w",
+        encoding="utf-8",
+    ) as file:
+
+        json.dump(
+            output,
+            file,
+            ensure_ascii=False,
+            indent=2,
+        )
+
+    os.replace(
+        TEMP_PATH,
+        OUTPUT_PATH,
+    )
+
+
+# =========================================================
+# 17. 메인
 # =========================================================
 
 def main():
@@ -758,70 +947,123 @@ def main():
         f"{start_date} ~ {end_date}"
     )
 
-    print()
+    old_events = (
+        load_existing_events()
+    )
 
-    # -----------------------------------------------------
-    # 행사 목록
-    # -----------------------------------------------------
+    old_by_id = {
+        str(event.get("id")): event
+        for event in old_events
+        if event.get("id")
+    }
 
-    festivals = fetch_all_festivals(
-        start_date,
-        end_date,
+    print(
+        f"기존 DB: "
+        f"{len(old_events)}건"
     )
 
     print()
 
+    # -----------------------------------------------------
+    # 목록 조회
+    # -----------------------------------------------------
+
+    festivals = (
+        fetch_all_festivals(
+            start_date,
+            end_date,
+        )
+    )
+
+    print()
     print(
-        f"행사 목록 총 "
+        f"행사 목록 "
         f"{len(festivals)}건 수집 완료"
     )
 
-    print()
-
     # -----------------------------------------------------
-    # 상세정보
+    # 기존 / 신규 분리
     # -----------------------------------------------------
 
     normalized_events = []
 
-    total = len(
-        festivals
-    )
+    new_count = 0
+    reused_count = 0
+
+    total = len(festivals)
 
     for index, basic in enumerate(
         festivals,
         start=1,
     ):
 
-        content_id = basic.get(
-            "contentid"
+        content_id = str(
+            basic.get(
+                "contentid",
+                "",
+            )
         )
 
-        content_type_id = basic.get(
-            "contenttypeid"
-        )
+        if not content_id:
+            continue
 
         title = basic.get(
             "title",
             "",
         )
 
+        if content_id in old_by_id:
+
+            print(
+                f"[{index}/{total}] "
+                f"기존 유지: {title}"
+            )
+
+            event = (
+                refresh_existing_event(
+                    old_by_id[
+                        content_id
+                    ],
+                    basic,
+                )
+            )
+
+            normalized_events.append(
+                event
+            )
+
+            reused_count += 1
+
+            continue
+
+        # -------------------------------------------------
+        # 신규 ID만 상세 API 호출
+        # -------------------------------------------------
+
         print(
             f"[{index}/{total}] "
-            f"{title}"
+            f"신규 상세 조회: {title}"
         )
 
-        common = fetch_common_detail(
-            content_id
+        content_type_id = basic.get(
+            "contenttypeid"
+        )
+
+        common = (
+            fetch_common_detail(
+                content_id
+            )
         )
 
         time.sleep(
             REQUEST_DELAY
         )
 
-        intro = fetch_intro_detail(
-            content_id,
-            content_type_id,
+        intro = (
+            fetch_intro_detail(
+                content_id,
+                content_type_id,
+            )
         )
 
         time.sleep(
@@ -838,8 +1080,10 @@ def main():
             event
         )
 
+        new_count += 1
+
     # -----------------------------------------------------
-    # 날짜 기준 한번 더 필터링
+    # 날짜 조건
     # -----------------------------------------------------
 
     today_iso = (
@@ -854,33 +1098,27 @@ def main():
 
     for event in normalized_events:
 
-        start_date_value = (
-            event.get(
-                "start_date",
-                "",
-            )
+        start_value = event.get(
+            "start_date",
+            "",
         )
 
-        end_date_value = (
-            event.get(
-                "end_date",
-                "",
-            )
+        end_value = event.get(
+            "end_date",
+            "",
         )
 
         if (
-            not start_date_value
-            or not end_date_value
+            not start_value
+            or not end_value
         ):
             continue
 
-        # 이미 종료된 행사 제외
-        if end_date_value < today_iso:
+        if end_value < today_iso:
             continue
 
-        # 3개월 뒤보다 늦게 시작하는 행사 제외
         if (
-            start_date_value
+            start_value
             > end_limit_iso
         ):
             continue
@@ -888,10 +1126,6 @@ def main():
         filtered_events.append(
             event
         )
-
-    # -----------------------------------------------------
-    # 정렬
-    # -----------------------------------------------------
 
     filtered_events.sort(
         key=lambda event: (
@@ -907,52 +1141,55 @@ def main():
     )
 
     # -----------------------------------------------------
+    # 안전성 검사
+    # -----------------------------------------------------
+
+    validate_result(
+        filtered_events,
+        old_events,
+    )
+
+    # -----------------------------------------------------
     # 저장
     # -----------------------------------------------------
 
-    os.makedirs(
-        "data",
-        exist_ok=True,
-    )
-
     output = {
-        "updated_at": (
+        "updated_at":
             datetime.now().isoformat(
                 timespec="seconds"
-            )
-        ),
+            ),
 
         "range": {
-            "start": today.isoformat(),
-            "end": (
-                three_months_later.isoformat()
-            ),
+            "start":
+                today.isoformat(),
+
+            "end":
+                three_months_later.isoformat(),
         },
 
-        "count": len(
-            filtered_events
-        ),
+        "count":
+            len(filtered_events),
 
-        "events": filtered_events,
+        "events":
+            filtered_events,
     }
 
-    with open(
-        OUTPUT_PATH,
-        "w",
-        encoding="utf-8",
-    ) as file:
-
-        json.dump(
-            output,
-            file,
-            ensure_ascii=False,
-            indent=2,
-        )
+    save_output(output)
 
     print()
     print("=" * 70)
     print("업데이트 완료")
     print("=" * 70)
+
+    print(
+        f"기존 재사용: "
+        f"{reused_count}건"
+    )
+
+    print(
+        f"신규 상세 조회: "
+        f"{new_count}건"
+    )
 
     print(
         f"최종 행사 수: "
@@ -964,10 +1201,6 @@ def main():
         f"{OUTPUT_PATH}"
     )
 
-
-# =========================================================
-# 실행
-# =========================================================
 
 if __name__ == "__main__":
     main()

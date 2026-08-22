@@ -1,6 +1,7 @@
 import os
 import json
 import html
+import time
 import requests
 import xml.etree.ElementTree as ET
 
@@ -17,25 +18,42 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-raw_api_key = os.getenv("CULTURE_API_KEY", "")
+raw_api_key = os.getenv(
+    "CULTURE_API_KEY",
+    "",
+)
 
 if not raw_api_key:
     raise ValueError(
         "CULTURE_API_KEY가 없습니다. "
-        ".env 파일에 CULTURE_API_KEY=발급받은키 형태로 입력하세요."
+        ".env 파일 또는 GitHub Secret을 확인하세요."
     )
 
-API_KEY = unquote(raw_api_key)
+API_KEY = unquote(
+    raw_api_key
+)
 
 
 # =========================================================
 # 2. API 주소
 # =========================================================
 
-BASE_URL = "https://apis.data.go.kr/B553457/cultureinfo"
-PERIOD_URL = f"{BASE_URL}/period2"
+BASE_URL = (
+    "https://apis.data.go.kr/"
+    "B553457/cultureinfo"
+)
 
-OUTPUT_PATH = "data/culture_events.json"
+PERIOD_URL = (
+    f"{BASE_URL}/period2"
+)
+
+OUTPUT_PATH = (
+    "data/culture_events.json"
+)
+
+TEMP_PATH = (
+    "data/culture_events.tmp.json"
+)
 
 
 # =========================================================
@@ -44,10 +62,67 @@ OUTPUT_PATH = "data/culture_events.json"
 
 ROWS = 10
 
+REQUEST_DELAY = 0.3
+
+MAX_RETRIES = 4
+
+RETRY_DELAYS = [
+    2,
+    4,
+    8,
+    16,
+]
+
 
 # =========================================================
-# 4. 날짜 변환
-# 20260820 → 2026-08-20
+# 4. 기존 데이터
+# =========================================================
+
+def load_existing_events():
+
+    if not os.path.exists(
+        OUTPUT_PATH
+    ):
+        return []
+
+    try:
+
+        with open(
+            OUTPUT_PATH,
+            "r",
+            encoding="utf-8",
+        ) as file:
+
+            data = json.load(
+                file
+            )
+
+        events = data.get(
+            "events",
+            [],
+        )
+
+        if isinstance(
+            events,
+            list,
+        ):
+            return events
+
+    except (
+        OSError,
+        json.JSONDecodeError,
+    ) as error:
+
+        print(
+            f"기존 JSON 읽기 실패: "
+            f"{error}"
+        )
+
+    return []
+
+
+# =========================================================
+# 5. 날짜
 # =========================================================
 
 def format_date(value):
@@ -56,6 +131,7 @@ def format_date(value):
         return ""
 
     try:
+
         parsed = datetime.strptime(
             value,
             "%Y%m%d",
@@ -66,17 +142,26 @@ def format_date(value):
         )
 
     except ValueError:
+
         return value
 
 
 # =========================================================
-# 5. 지역 정규화
+# 6. 지역
 # =========================================================
 
-def normalize_region(area, sigungu=""):
+def normalize_region(
+    area,
+    sigungu="",
+):
 
-    area = (area or "").strip()
-    sigungu = (sigungu or "").strip()
+    area = (
+        area or ""
+    ).strip()
+
+    sigungu = (
+        sigungu or ""
+    ).strip()
 
     aliases = {
         "서울": "서울특별시",
@@ -104,14 +189,16 @@ def normalize_region(area, sigungu=""):
 
         "세종": "세종특별자치시",
         "세종시": "세종특별자치시",
-        "세종특별자치시": "세종특별자치시",
+        "세종특별자치시":
+            "세종특별자치시",
 
         "경기": "경기도",
         "경기도": "경기도",
 
         "강원": "강원특별자치도",
         "강원도": "강원특별자치도",
-        "강원특별자치도": "강원특별자치도",
+        "강원특별자치도":
+            "강원특별자치도",
 
         "충북": "충청북도",
         "충청북도": "충청북도",
@@ -120,7 +207,8 @@ def normalize_region(area, sigungu=""):
         "충청남도": "충청남도",
 
         "전북": "전북특별자치도",
-        "전북특별자치도": "전북특별자치도",
+        "전북특별자치도":
+            "전북특별자치도",
 
         "전남": "전라남도",
         "전라남도": "전라남도",
@@ -133,12 +221,9 @@ def normalize_region(area, sigungu=""):
 
         "제주": "제주특별자치도",
         "제주도": "제주특별자치도",
-        "제주특별자치도": "제주특별자치도",
+        "제주특별자치도":
+            "제주특별자치도",
     }
-
-    # -----------------------------------------------------
-    # 문화포털에서 확인된 잘못된 광주/전남 묶음 보정
-    # -----------------------------------------------------
 
     jeonnam_cities = {
         "목포시",
@@ -178,31 +263,25 @@ def normalize_region(area, sigungu=""):
         "전남광주통합특별시",
     }:
 
-        if first_sigungu in jeonnam_cities:
+        if (
+            first_sigungu
+            in jeonnam_cities
+        ):
             return "전라남도"
 
         return "광주광역시"
 
-    # -----------------------------------------------------
-    # 기본 별칭 변환
-    # -----------------------------------------------------
-
     if area in aliases:
         return aliases[area]
-
-    # -----------------------------------------------------
-    # 지역 정보 없음
-    # -----------------------------------------------------
 
     if not area:
         return ""
 
-    # 알 수 없는 값은 원본 유지
     return area
 
 
 # =========================================================
-# 6. XML item → dict
+# 7. XML item
 # =========================================================
 
 def item_to_dict(item):
@@ -211,106 +290,158 @@ def item_to_dict(item):
 
     for child in item:
 
-        value = child.text or ""
+        value = (
+            child.text or ""
+        )
 
-        result[child.tag] = html.unescape(
-            value
-        ).strip()
+        result[child.tag] = (
+            html.unescape(value)
+            .strip()
+        )
 
     return result
 
 
 # =========================================================
-# 7. 한 페이지 요청
+# 8. 한 페이지 요청
 # =========================================================
 
-def fetch_page(page, start_date, end_date):
+def fetch_page(
+    page,
+    start_date,
+    end_date,
+):
 
     params = {
-        "serviceKey": API_KEY,
-        "from": start_date,
-        "to": end_date,
-        "PageNo": page,
-        "rows": ROWS,
+        "serviceKey":
+            API_KEY,
+
+        "from":
+            start_date,
+
+        "to":
+            end_date,
+
+        "PageNo":
+            page,
+
+        "rows":
+            ROWS,
     }
 
-    try:
-        response = requests.get(
-            PERIOD_URL,
-            params=params,
-            timeout=30,
-        )
+    last_error = None
 
-        response.raise_for_status()
+    for attempt in range(
+        1,
+        MAX_RETRIES + 1,
+    ):
 
-    except requests.RequestException as error:
+        try:
 
-        print(
-            f"API 요청 실패: {error}"
-        )
+            response = requests.get(
+                PERIOD_URL,
+                params=params,
+                timeout=30,
+            )
 
-        return None, 0
+            response.raise_for_status()
 
-    try:
-        root = ET.fromstring(
-            response.text
-        )
+            root = ET.fromstring(
+                response.text
+            )
 
-    except ET.ParseError:
+            result_code = (
+                root.findtext(
+                    ".//resultCode"
+                )
+            )
 
-        print(
-            "XML 파싱 실패"
-        )
+            result_msg = (
+                root.findtext(
+                    ".//resultMsg"
+                )
+            )
 
-        return None, 0
+            if result_code != "00":
 
-    result_code = root.findtext(
-        ".//resultCode"
+                raise RuntimeError(
+                    "문화포털 오류: "
+                    f"{result_code} / "
+                    f"{result_msg}"
+                )
+
+            total_count_text = (
+                root.findtext(
+                    ".//totalCount"
+                )
+                or "0"
+            )
+
+            total_count = int(
+                total_count_text
+            )
+
+            items = [
+                item_to_dict(item)
+                for item
+                in root.findall(
+                    ".//item"
+                )
+            ]
+
+            return (
+                items,
+                total_count,
+            )
+
+        except (
+            requests.RequestException,
+            ET.ParseError,
+            ValueError,
+            RuntimeError,
+        ) as error:
+
+            last_error = error
+
+            print(
+                f"API 요청 실패 "
+                f"({attempt}/"
+                f"{MAX_RETRIES}): "
+                f"{error}"
+            )
+
+            if attempt < MAX_RETRIES:
+
+                delay = (
+                    RETRY_DELAYS[
+                        attempt - 1
+                    ]
+                )
+
+                print(
+                    f"{delay}초 후 "
+                    "재시도..."
+                )
+
+                time.sleep(
+                    delay
+                )
+
+    raise RuntimeError(
+        "문화포털 API가 "
+        "반복 실패했습니다: "
+        f"{last_error}"
     )
-
-    result_msg = root.findtext(
-        ".//resultMsg"
-    )
-
-    if result_code != "00":
-
-        print(
-            f"문화포털 오류: "
-            f"{result_code} / {result_msg}"
-        )
-
-        return None, 0
-
-    total_count_text = (
-        root.findtext(
-            ".//totalCount"
-        )
-        or "0"
-    )
-
-    try:
-        total_count = int(
-            total_count_text
-        )
-
-    except ValueError:
-        total_count = 0
-
-    items = [
-        item_to_dict(item)
-        for item in root.findall(
-            ".//item"
-        )
-    ]
-
-    return items, total_count
 
 
 # =========================================================
-# 8. 전체 목록 수집
+# 9. 전체 목록
 # =========================================================
 
-def fetch_all_items(start_date, end_date):
+def fetch_all_items(
+    start_date,
+    end_date,
+):
 
     all_items = []
 
@@ -320,21 +451,24 @@ def fetch_all_items(start_date, end_date):
     while True:
 
         print(
-            f"페이지 {page} 조회 중..."
+            f"페이지 "
+            f"{page} 조회 중..."
         )
 
-        items, current_total = fetch_page(
+        (
+            items,
+            current_total,
+        ) = fetch_page(
             page,
             start_date,
             end_date,
         )
 
-        if items is None:
-            break
-
         if total_count is None:
 
-            total_count = current_total
+            total_count = (
+                current_total
+            )
 
             print(
                 f"전체 검색 결과: "
@@ -342,6 +476,19 @@ def fetch_all_items(start_date, end_date):
             )
 
         if not items:
+
+            if (
+                total_count
+                and len(all_items)
+                < total_count
+            ):
+
+                raise RuntimeError(
+                    "문화포털 목록 "
+                    "수집이 중간에 "
+                    "종료되었습니다."
+                )
+
             break
 
         all_items.extend(
@@ -353,78 +500,189 @@ def fetch_all_items(start_date, end_date):
             f"{total_count}건"
         )
 
-        if len(all_items) >= total_count:
+        if (
+            total_count is not None
+            and len(all_items)
+            >= total_count
+        ):
             break
 
         page += 1
+
+        time.sleep(
+            REQUEST_DELAY
+        )
+
+    if total_count is None:
+
+        raise RuntimeError(
+            "문화포털 totalCount를 "
+            "확인할 수 없습니다."
+        )
+
+    if len(all_items) < total_count:
+
+        raise RuntimeError(
+            "문화포털 목록이 "
+            "완전히 수집되지 않았습니다. "
+            f"{len(all_items)} / "
+            f"{total_count}"
+        )
 
     return all_items
 
 
 # =========================================================
-# 9. 내부 데이터 형식으로 정규화
+# 10. 정규화
 # =========================================================
 
 def normalize_event(item):
 
     region = normalize_region(
-        item.get("area", ""),
-        item.get("sigungu", ""),
-    )
-
-    return {
-        "id": item.get(
-            "seq",
+        item.get(
+            "area",
             "",
         ),
 
-        "title": item.get(
-            "title",
-            "",
-        ),
-
-        "type": item.get(
-            "realmName",
-            "",
-        ),
-
-        "service_type": item.get(
-            "serviceName",
-            "",
-        ),
-
-        "start_date": format_date(
-            item.get(
-                "startDate",
-                "",
-            )
-        ),
-
-        "end_date": format_date(
-            item.get(
-                "endDate",
-                "",
-            )
-        ),
-
-        "region": region,
-
-        "city": item.get(
+        item.get(
             "sigungu",
             "",
         ),
+    )
 
-        "place": item.get(
-            "place",
-            "",
-        ),
+    return {
+        "id":
+            item.get(
+                "seq",
+                "",
+            ),
 
-        "source": "culture",
+        "title":
+            item.get(
+                "title",
+                "",
+            ),
+
+        "type":
+            item.get(
+                "realmName",
+                "",
+            ),
+
+        "service_type":
+            item.get(
+                "serviceName",
+                "",
+            ),
+
+        "start_date":
+            format_date(
+                item.get(
+                    "startDate",
+                    "",
+                )
+            ),
+
+        "end_date":
+            format_date(
+                item.get(
+                    "endDate",
+                    "",
+                )
+            ),
+
+        "region":
+            region,
+
+        "city":
+            item.get(
+                "sigungu",
+                "",
+            ),
+
+        "place":
+            item.get(
+                "place",
+                "",
+            ),
+
+        "source":
+            "culture",
     }
 
 
 # =========================================================
-# 10. 메인
+# 11. 안전성 검사
+# =========================================================
+
+def validate_result(
+    new_events,
+    old_events,
+):
+
+    if not new_events:
+
+        raise RuntimeError(
+            "문화포털 최종 결과가 "
+            "0건입니다. "
+            "기존 JSON을 보존합니다."
+        )
+
+    old_count = len(
+        old_events
+    )
+
+    new_count = len(
+        new_events
+    )
+
+    if (
+        old_count >= 20
+        and new_count
+        < old_count * 0.5
+    ):
+
+        raise RuntimeError(
+            "문화 행사 수가 "
+            "비정상적으로 급감했습니다. "
+            f"기존 {old_count}건 → "
+            f"신규 {new_count}건. "
+            "저장을 취소합니다."
+        )
+
+
+# =========================================================
+# 12. 안전 저장
+# =========================================================
+
+def save_output(output):
+
+    os.makedirs(
+        "data",
+        exist_ok=True,
+    )
+
+    with open(
+        TEMP_PATH,
+        "w",
+        encoding="utf-8",
+    ) as file:
+
+        json.dump(
+            output,
+            file,
+            ensure_ascii=False,
+            indent=2,
+        )
+
+    os.replace(
+        TEMP_PATH,
+        OUTPUT_PATH,
+    )
+
+
+# =========================================================
+# 13. 메인
 # =========================================================
 
 def main():
@@ -438,27 +696,44 @@ def main():
         )
     )
 
-    start_date = today.strftime(
-        "%Y%m%d"
+    start_date = (
+        today.strftime(
+            "%Y%m%d"
+        )
     )
 
-    end_date = three_months_later.strftime(
-        "%Y%m%d"
+    end_date = (
+        three_months_later.strftime(
+            "%Y%m%d"
+        )
     )
 
     print("=" * 70)
-    print("놀만한날 문화포털 데이터 업데이트")
+    print(
+        "놀만한날 문화포털 "
+        "데이터 업데이트"
+    )
     print("=" * 70)
 
     print(
         f"조회 기간: "
-        f"{start_date} ~ {end_date}"
+        f"{start_date} ~ "
+        f"{end_date}"
+    )
+
+    old_events = (
+        load_existing_events()
+    )
+
+    print(
+        f"기존 DB: "
+        f"{len(old_events)}건"
     )
 
     print()
 
     # -----------------------------------------------------
-    # 원본 목록 수집
+    # 수집
     # -----------------------------------------------------
 
     items = fetch_all_items(
@@ -482,7 +757,7 @@ def main():
     ]
 
     # -----------------------------------------------------
-    # seq 중복 제거
+    # 중복 제거
     # -----------------------------------------------------
 
     unique_events = {}
@@ -497,45 +772,58 @@ def main():
         if not event_id:
             continue
 
-        unique_events[event_id] = event
+        unique_events[
+            event_id
+        ] = event
 
     events = list(
         unique_events.values()
     )
 
     # -----------------------------------------------------
-    # 날짜 조건 재검증
+    # 날짜 조건
     # -----------------------------------------------------
 
-    today_iso = today.isoformat()
+    today_iso = (
+        today.isoformat()
+    )
 
     end_limit_iso = (
-        three_months_later.isoformat()
+        three_months_later
+        .isoformat()
     )
 
     filtered_events = []
 
     for event in events:
 
-        start_value = event.get(
-            "start_date",
-            "",
+        start_value = (
+            event.get(
+                "start_date",
+                "",
+            )
         )
 
-        end_value = event.get(
-            "end_date",
-            "",
+        end_value = (
+            event.get(
+                "end_date",
+                "",
+            )
         )
 
-        if not start_value or not end_value:
+        if (
+            not start_value
+            or not end_value
+        ):
             continue
 
-        # 이미 종료된 행사 제외
         if end_value < today_iso:
             continue
 
-        # 3개월 뒤보다 늦게 시작하는 행사 제외
-        if start_value > end_limit_iso:
+        if (
+            start_value
+            > end_limit_iso
+        ):
             continue
 
         filtered_events.append(
@@ -543,13 +831,7 @@ def main():
         )
 
     # -----------------------------------------------------
-    # 기본 정렬
-    #
-    # 1. 현재 진행 중
-    #    → 종료 임박순
-    #
-    # 2. 아직 시작하지 않음
-    #    → 시작일 빠른 순
+    # 정렬
     # -----------------------------------------------------
 
     def sort_key(event):
@@ -565,7 +847,9 @@ def main():
         )
 
         is_ongoing = (
-            start <= today_iso <= end
+            start
+            <= today_iso
+            <= end
         )
 
         if is_ongoing:
@@ -595,43 +879,44 @@ def main():
     )
 
     # -----------------------------------------------------
+    # 안전성 검사
+    # -----------------------------------------------------
+
+    validate_result(
+        filtered_events,
+        old_events,
+    )
+
+    # -----------------------------------------------------
     # 저장
     # -----------------------------------------------------
 
-    os.makedirs(
-        "data",
-        exist_ok=True,
-    )
-
     output = {
-        "updated_at": datetime.now().isoformat(
-            timespec="seconds"
-        ),
+        "updated_at":
+            datetime.now()
+            .isoformat(
+                timespec="seconds"
+            ),
 
         "range": {
-            "start": today.isoformat(),
-            "end": three_months_later.isoformat(),
+            "start":
+                today.isoformat(),
+
+            "end":
+                three_months_later
+                .isoformat(),
         },
 
-        "count": len(
-            filtered_events
-        ),
+        "count":
+            len(filtered_events),
 
-        "events": filtered_events,
+        "events":
+            filtered_events,
     }
 
-    with open(
-        OUTPUT_PATH,
-        "w",
-        encoding="utf-8",
-    ) as file:
-
-        json.dump(
-            output,
-            file,
-            ensure_ascii=False,
-            indent=2,
-        )
+    save_output(
+        output
+    )
 
     print()
     print("=" * 70)

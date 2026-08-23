@@ -3,7 +3,7 @@ name: Update event data
 on:
   schedule:
     # KST 00:00 = UTC 15:00
-    - cron: "0 15 * * *"
+    - cron: "0 19 * * *"
 
   workflow_dispatch:
 

@@ -32,10 +32,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-
-      - name: Test data.go.kr connection
-        run: |
-          curl -v --connect-timeout 20 https://apis.data.go.kr/
       
       - name: Update TourAPI events
         env:

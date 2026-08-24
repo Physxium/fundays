@@ -1,1091 +1,11 @@
 {
-  "updated_at": "2026-08-23T19:26:12",
+  "updated_at": "2026-08-24T19:34:41",
   "range": {
-    "start": "2026-08-23",
-    "end": "2026-11-23"
+    "start": "2026-08-24",
+    "end": "2026-11-24"
   },
-  "count": 1034,
+  "count": 1006,
   "events": [
-    {
-      "id": "354401",
-      "title": "만인산: 보존과 해체의 기록",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2025-08-26",
-      "end_date": "2026-08-23",
-      "region": "경기도",
-      "city": "파주시",
-      "place": "국립민속박물관 파주",
-      "source": "culture"
-    },
-    {
-      "id": "380140",
-      "title": "[대전] 공포스릴러연극 <시그널>",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2025-10-24",
-      "end_date": "2026-08-23",
-      "region": "대전광역시",
-      "city": "중구",
-      "place": "아신극장 2관 (2층)",
-      "source": "culture"
-    },
-    {
-      "id": "387704",
-      "title": "국립세계문자박물관 특별전시 <글씨상점: 당신의 글씨, 당신의 취향>",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-05-01",
-      "end_date": "2026-08-23",
-      "region": "인천광역시",
-      "city": "연수구",
-      "place": "국립세계문자박물관",
-      "source": "culture"
-    },
-    {
-      "id": "373581",
-      "title": "코스모 아시아 피플 COSMO, ASIA, PEOPLE",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-05-14",
-      "end_date": "2026-08-23",
-      "region": "광주광역시",
-      "city": "동구",
-      "place": "국립아시아문화전당",
-      "source": "culture"
-    },
-    {
-      "id": "379281",
-      "title": "ACC 국제교류특별전〈자밀 프라이즈: 무빙 이미지〉",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-05-28",
-      "end_date": "2026-08-23",
-      "region": "광주광역시",
-      "city": "동구",
-      "place": "국립아시아문화전당 문화창조원 복합 6관",
-      "source": "culture"
-    },
-    {
-      "id": "381354",
-      "title": "인상주의를 넘어: 르누아르·드가·고흐·마티스·피카소",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-05-28",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "세종문화회관 미술관",
-      "source": "culture"
-    },
-    {
-      "id": "375753",
-      "title": "쥬세뻬 비탈레 그림책 원화전 <동물의 세계_몬도 아니말레展>",
-      "type": "전시",
-      "service_type": "공연",
-      "start_date": "2026-06-04",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "강동구",
-      "place": "강동아트센터 복합문화공간 아트랑",
-      "source": "culture"
-    },
-    {
-      "id": "379662",
-      "title": "[서울] 뮤지컬 그날들",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-06-09",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "구로구",
-      "place": "디큐브아트센터",
-      "source": "culture"
-    },
-    {
-      "id": "380373",
-      "title": "꽃, 별이 지나",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-06-16",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "서경대학교 공연예술센터",
-      "source": "culture"
-    },
-    {
-      "id": "391139",
-      "title": "연극 <꽃, 별이 지나>",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-06-16",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "서경대학교 공연예술센터 스콘1관",
-      "source": "culture"
-    },
-    {
-      "id": "382137",
-      "title": "[서울] 유미의 세포들",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-06-30",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "서초구",
-      "place": "예술의전당 [서울] CJ 토월극장",
-      "source": "culture"
-    },
-    {
-      "id": "389357",
-      "title": "2026 천안시립미술관·충남미술관 협력전 《균열: 충남의 아방가르드》",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-07-01",
-      "end_date": "2026-08-23",
-      "region": "충청남도",
-      "city": "천안시",
-      "place": "천안시립미술관",
-      "source": "culture"
-    },
-    {
-      "id": "390908",
-      "title": "찾아가는 공예명작전 2026 《The Masterpieces of Korean Craft: 뿌리와 열매》",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-07-01",
-      "end_date": "2026-08-23",
-      "region": "충청남도",
-      "city": "천안시",
-      "place": "천안시립미술관",
-      "source": "culture"
-    },
-    {
-      "id": "382664",
-      "title": "[서울 종로] 오이디푸스",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-07-04",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "세종문화회관 세종M씨어터",
-      "source": "culture"
-    },
-    {
-      "id": "387506",
-      "title": "《균열: 충남의 아방가르드》어린이 대상 주말 프로그램",
-      "type": "교육/체험",
-      "service_type": "교육/체험",
-      "start_date": "2026-07-04",
-      "end_date": "2026-08-23",
-      "region": "충청남도",
-      "city": "",
-      "place": "",
-      "source": "culture"
-    },
-    {
-      "id": "383597",
-      "title": "[서울] 리나, 슈퍼히어로",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-07-10",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "서초구",
-      "place": "한전아트센터",
-      "source": "culture"
-    },
-    {
-      "id": "383596",
-      "title": "더 스토리 오브 언더더씨",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-07-10",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "송파구",
-      "place": "올림픽공원 우리금융아트홀(역도경기장)",
-      "source": "culture"
-    },
-    {
-      "id": "384851",
-      "title": "용궁에 간 토끼",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-07-17",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "송파구",
-      "place": "롯데월드 민속박물관",
-      "source": "culture"
-    },
-    {
-      "id": "394070",
-      "title": "2026 지역전시 활성화 사업 <펫아트뮤지엄>",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-07-18",
-      "end_date": "2026-08-23",
-      "region": "경상남도",
-      "city": "밀양시",
-      "place": "밀양아리랑아트센터",
-      "source": "culture"
-    },
-    {
-      "id": "385985",
-      "title": "[서울] 헬로카봇: 카봇크루가 되어줘!",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-07-25",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "강남구",
-      "place": "백암아트홀",
-      "source": "culture"
-    },
-    {
-      "id": "387163",
-      "title": "[서울] 뽀로로와 타요: 올스타 어드벤처",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-01",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "서대문구",
-      "place": "이화여자대학교 삼성홀",
-      "source": "culture"
-    },
-    {
-      "id": "387350",
-      "title": "[서울] 최현우 FaTe",
-      "type": "기타",
-      "service_type": "공연",
-      "start_date": "2026-08-01",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "성동구",
-      "place": "소월아트홀(성동문화회관)",
-      "source": "culture"
-    },
-    {
-      "id": "391648",
-      "title": "리빙포인트",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-08-02",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "주석모음집",
-      "source": "culture"
-    },
-    {
-      "id": "391158",
-      "title": "2026 산울림 고전극장 <플레이위드 햄릿>",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-06",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "마포구",
-      "place": "산울림소극장",
-      "source": "culture"
-    },
-    {
-      "id": "394144",
-      "title": "2026 인천아트플랫폼 국제교류(호주) 교환작가 제스 탄(Jess TAN) 개인전 《미상 생명체》 Indeterminate lifeform(new tidal energy)",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-08-06",
-      "end_date": "2026-08-23",
-      "region": "인천광역시",
-      "city": "제물포구",
-      "place": "인천아트플랫폼",
-      "source": "culture"
-    },
-    {
-      "id": "394096",
-      "title": "2026사유의 기억들 <이재동,조경희,경금자,박경숙,정귀수,정재섭,정시권>",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-08-11",
-      "end_date": "2026-08-23",
-      "region": "강원특별자치도",
-      "city": "춘천시",
-      "place": "애니메이션박물관",
-      "source": "culture"
-    },
-    {
-      "id": "390500",
-      "title": "[대학로] 오버 더 레인보우",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-11",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "대학로 스카이씨어터",
-      "source": "culture"
-    },
-    {
-      "id": "393124",
-      "title": "[원주 갤러리 원] 김미애 초대개인전 \"초록의 위로\"",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-08-12",
-      "end_date": "2026-08-23",
-      "region": "강원특별자치도",
-      "city": "원주시",
-      "place": "갤러리 원",
-      "source": "culture"
-    },
-    {
-      "id": "390994",
-      "title": "베드타임 스토리: 이야기가 만들어 낸 시선들",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-12",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "극장 동국",
-      "source": "culture"
-    },
-    {
-      "id": "389756",
-      "title": "[대학로] 도넛",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-14",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "예술공간 혜화",
-      "source": "culture"
-    },
-    {
-      "id": "389015",
-      "title": "예술의전당 & 유니버설발레단: 백조의 호수",
-      "type": "무용/발레",
-      "service_type": "공연",
-      "start_date": "2026-08-14",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "서초구",
-      "place": "예술의전당 [서울] 오페라극장",
-      "source": "culture"
-    },
-    {
-      "id": "389271",
-      "title": "[수원] 시계 추미의 빨간 모자와 늑대",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-15",
-      "end_date": "2026-08-23",
-      "region": "경기도",
-      "city": "수원시",
-      "place": "KBS 수원아트홀",
-      "source": "culture"
-    },
-    {
-      "id": "392031",
-      "title": "서울프린지페스티벌2026, 엇갈림: 몸이 된 말, 어긋난 몸",
-      "type": "무용/발레",
-      "service_type": "공연",
-      "start_date": "2026-08-16",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "서대문구",
-      "place": "스튜디오 마스 MAS",
-      "source": "culture"
-    },
-    {
-      "id": "390629",
-      "title": "[광주] 아직, 서른",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-17",
-      "end_date": "2026-08-23",
-      "region": "광주광역시",
-      "city": "동구",
-      "place": "궁동예술극장",
-      "source": "culture"
-    },
-    {
-      "id": "394173",
-      "title": "FOGHORN",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-08-18",
-      "end_date": "2026-08-23",
-      "region": "인천광역시",
-      "city": "제물포구",
-      "place": "인천아트플랫폼",
-      "source": "culture"
-    },
-    {
-      "id": "389363",
-      "title": "[부천] 아기돼지 삼형제",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-18",
-      "end_date": "2026-08-23",
-      "region": "경기도",
-      "city": "부천시",
-      "place": "한국만화박물관 만화영화상영관",
-      "source": "culture"
-    },
-    {
-      "id": "392319",
-      "title": "연극 <결혼식 2시간 전>",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-18",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "나인진홀 1관 (1층)",
-      "source": "culture"
-    },
-    {
-      "id": "394160",
-      "title": "이순덕 개인전",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-08-18",
-      "end_date": "2026-08-23",
-      "region": "강원특별자치도",
-      "city": "강릉시",
-      "place": "강릉아트센터 제2전시실",
-      "source": "culture"
-    },
-    {
-      "id": "389808",
-      "title": "제3회 심야 연극제, 결혼식 2시간 전",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-18",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "나인진홀",
-      "source": "culture"
-    },
-    {
-      "id": "392340",
-      "title": "[대학로] 과수원 삼형제",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-19",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "동숭무대소극장",
-      "source": "culture"
-    },
-    {
-      "id": "392143",
-      "title": "[대학로] 빵과 뻥과 삐삐",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-19",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "소극장 혜화당(구. 까망소극장)",
-      "source": "culture"
-    },
-    {
-      "id": "389858",
-      "title": "요셉: 너를 향한 계획",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-19",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "동작구",
-      "place": "CTS아트홀",
-      "source": "culture"
-    },
-    {
-      "id": "392431",
-      "title": "화염",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-19",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "드림시어터 [대학로]",
-      "source": "culture"
-    },
-    {
-      "id": "392364",
-      "title": "[대전] 달그림자 카페",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-20",
-      "end_date": "2026-08-23",
-      "region": "대전광역시",
-      "city": "중구",
-      "place": "소극장 고도",
-      "source": "culture"
-    },
-    {
-      "id": "392360",
-      "title": "사의 찬미: 마음의 자취",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-20",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "효천아트센터 그라운드씬",
-      "source": "culture"
-    },
-    {
-      "id": "391439",
-      "title": "인터뷰 기행: 서울수저편",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-20",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "선돌극장",
-      "source": "culture"
-    },
-    {
-      "id": "392429",
-      "title": "칼라릿 누낫",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-20",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "성북구",
-      "place": "유영공간",
-      "source": "culture"
-    },
-    {
-      "id": "391684",
-      "title": "프레임 아웃",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-20",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "강북구",
-      "place": "서울문화예술교육센터 강북 예술당솔샘(2F)",
-      "source": "culture"
-    },
-    {
-      "id": "392614",
-      "title": "해송의 시간",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-20",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "소극장 플랫폼74",
-      "source": "culture"
-    },
-    {
-      "id": "389854",
-      "title": "ACC 모두를 위한 극장, 모양모양",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-21",
-      "end_date": "2026-08-23",
-      "region": "광주광역시",
-      "city": "동구",
-      "place": "국립아시아문화전당 어린이극장",
-      "source": "culture"
-    },
-    {
-      "id": "389702",
-      "title": "[광주] 빨래",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-21",
-      "end_date": "2026-08-23",
-      "region": "광주광역시",
-      "city": "북구",
-      "place": "광주예술의전당",
-      "source": "culture"
-    },
-    {
-      "id": "392210",
-      "title": "[대학로] Gate: 문 너머",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-21",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "브이씨어터",
-      "source": "culture"
-    },
-    {
-      "id": "390636",
-      "title": "[대학로] 긴긴밤",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-21",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "한성아트홀(구. 인켈아트홀) 1관",
-      "source": "culture"
-    },
-    {
-      "id": "391770",
-      "title": "[대학로] 여름을 탈출하는 법",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-21",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "코델아트홀",
-      "source": "culture"
-    },
-    {
-      "id": "384365",
-      "title": "[마포문화재단] 2026 M 초이스 창극 〈살로메〉",
-      "type": "국악",
-      "service_type": "공연",
-      "start_date": "2026-08-21",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "마포구",
-      "place": "마포아트센터 아트홀맥",
-      "source": "culture"
-    },
-    {
-      "id": "389688",
-      "title": "[서울 강서] THE WAY, 사도행전",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-21",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "강서구",
-      "place": "스카이아트홀",
-      "source": "culture"
-    },
-    {
-      "id": "392515",
-      "title": "《사이의 선 THE LINES IN BETWEEN》",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-08-21",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "마포구",
-      "place": "갤러리 지하",
-      "source": "culture"
-    },
-    {
-      "id": "389708",
-      "title": "개구쟁이와 마법",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-21",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "서초구",
-      "place": "예술의전당 [서울] 자유소극장",
-      "source": "culture"
-    },
-    {
-      "id": "384555",
-      "title": "접근성 높은 뮤지컬 <극장의 마법사>",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-21",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "강동구",
-      "place": "강동아트센터 소극장 드림",
-      "source": "culture"
-    },
-    {
-      "id": "387902",
-      "title": "2026 청소년스포츠한마당 댄스스포츠 대회",
-      "type": "행사/축제",
-      "service_type": "행사/축제",
-      "start_date": "2026-08-22",
-      "end_date": "2026-08-23",
-      "region": "강원특별자치도",
-      "city": "강릉시",
-      "place": "체육관",
-      "source": "culture"
-    },
-    {
-      "id": "392196",
-      "title": "[대학로] 가족사진",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-22",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "제이원씨어터",
-      "source": "culture"
-    },
-    {
-      "id": "391718",
-      "title": "[대학로] 란, 태수야",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-22",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "대학로 이음센터",
-      "source": "culture"
-    },
-    {
-      "id": "393816",
-      "title": "[울산] 히로시마메시지",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-22",
-      "end_date": "2026-08-23",
-      "region": "울산광역시",
-      "city": "중구",
-      "place": "아트홀 마당",
-      "source": "culture"
-    },
-    {
-      "id": "391448",
-      "title": "[제주] 검은 절망",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-22",
-      "end_date": "2026-08-23",
-      "region": "제주특별자치도",
-      "city": "제주시",
-      "place": "제주아트센터 대극장",
-      "source": "culture"
-    },
-    {
-      "id": "391444",
-      "title": "눈 속의 고요",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-22",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "성북구",
-      "place": "놀터예술공방",
-      "source": "culture"
-    },
-    {
-      "id": "390086",
-      "title": "미래에게",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-22",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "창조소극장 (구. 민아트홀)",
-      "source": "culture"
-    },
-    {
-      "id": "384345",
-      "title": "심포니 오브 뮤지컬 II  <주소연의 Dear My Music>",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-22",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "강동구",
-      "place": "강동아트센터 대극장 한강",
-      "source": "culture"
-    },
-    {
-      "id": "384260",
-      "title": "2026 예술의전당 국제음악제 - 이승원 & 아나스타샤 코베키나 with SAC 페스티벌 오케스트라",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "서초구",
-      "place": "예술의전당 [서울] 콘서트홀",
-      "source": "culture"
-    },
-    {
-      "id": "384261",
-      "title": "2026 예술의전당 국제음악제 - 현대음악앙상블소리 3.0",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "서초구",
-      "place": "예술의전당 리사이틀홀",
-      "source": "culture"
-    },
-    {
-      "id": "390269",
-      "title": "BAC 오르간, 벤자민 리게티 오르간 리사이틀",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "경기도",
-      "city": "부천시",
-      "place": "부천아트센터 콘서트홀",
-      "source": "culture"
-    },
-    {
-      "id": "391431",
-      "title": "[강릉] 오이루스 바로크 콘서트 시리즈 Ⅳ. 18세기 유럽 궁정음악",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "강원특별자치도",
-      "city": "강릉시",
-      "place": "강릉원주대학교 하슬라홀",
-      "source": "culture"
-    },
-    {
-      "id": "391694",
-      "title": "[당진] 한국가곡 대축제",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "충청남도",
-      "city": "당진시",
-      "place": "당진문예의전당 대공연장",
-      "source": "culture"
-    },
-    {
-      "id": "393475",
-      "title": "[대구] 제6회 예술단체 피아르 정기연주회: 여름",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "대구광역시",
-      "city": "수성구",
-      "place": "대구범어대성당 드망즈홀",
-      "source": "culture"
-    },
-    {
-      "id": "393782",
-      "title": "[대전] 제26회 피아노하모니아 정기연주회: 모차르트 탄생 270주년 기념, Dear Mozart",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "대전광역시",
-      "city": "서구",
-      "place": "대전시립연정국악원 작은마당",
-      "source": "culture"
-    },
-    {
-      "id": "391691",
-      "title": "[대전] 제7회 가온병창단 정기연주회, K-Classic: 전통의 장, 새로운 공명",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "대전광역시",
-      "city": "서구",
-      "place": "대전예술의전당 앙상블홀",
-      "source": "culture"
-    },
-    {
-      "id": "394024",
-      "title": "[부산] 비바아첼 인문학콘서트: 역학으로 듣는 베토벤, 사주로 읽는 한 천재의 삶과 음악",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "부산광역시",
-      "city": "해운대구",
-      "place": "비바아첼 Chamber Hall & Academy",
-      "source": "culture"
-    },
-    {
-      "id": "394023",
-      "title": "[부산] 비바아첼 인문학콘서트: 음악으로 흐르는 다섯가지 기운, 오행 콘서트",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "부산광역시",
-      "city": "해운대구",
-      "place": "비바아첼 Chamber Hall & Academy",
-      "source": "culture"
-    },
-    {
-      "id": "390227",
-      "title": "[부산] 피아니스트 김설화 초청 독주회: 형식에서 환상으로, 그리고 낭만으로",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "부산광역시",
-      "city": "남구",
-      "place": "부산문화회관 중극장",
-      "source": "culture"
-    },
-    {
-      "id": "390254",
-      "title": "[부천] 노현진 피아노 독주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "경기도",
-      "city": "부천시",
-      "place": "부천아트센터 소공연장",
-      "source": "culture"
-    },
-    {
-      "id": "390512",
-      "title": "[성남] 제2회 참빛 심포니 오케스트라 정기연주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "경기도",
-      "city": "성남시",
-      "place": "성남아트센터 앙상블씨어터",
-      "source": "culture"
-    },
-    {
-      "id": "390822",
-      "title": "[수원] 시간을 파는 가게: 당신의 이야기를 들어드립니다",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "경기도",
-      "city": "수원시",
-      "place": "장안구민회관 한누리아트홀",
-      "source": "culture"
-    },
-    {
-      "id": "390233",
-      "title": "바이올리니스트 노윤정 리사이틀",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "세종문화회관 세종체임버홀",
-      "source": "culture"
-    },
-    {
-      "id": "390826",
-      "title": "서정민 판소리 독창회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "서초구",
-      "place": "국립국악원 풍류사랑방",
-      "source": "culture"
-    },
-    {
-      "id": "392627",
-      "title": "손유정 오보에 독주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "서대문구",
-      "place": "금호아트홀 연세",
-      "source": "culture"
-    },
-    {
-      "id": "390152",
-      "title": "오늘의 음악 Ⅳ - 5인의 산조",
-      "type": "국악",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "서울돈화문국악당",
-      "source": "culture"
-    },
-    {
-      "id": "393547",
-      "title": "일요, 마티네 콘서트: 오보이스트 이도규 독주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "마포구",
-      "place": "콘서트홀 나누",
-      "source": "culture"
-    },
-    {
-      "id": "392189",
-      "title": "제15회 DaKAPO 정기 연주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "강북구",
-      "place": "꿈의숲아트센터 콘서트홀",
-      "source": "culture"
-    },
-    {
-      "id": "392618",
-      "title": "제27회 동탄유스오케스트라 정기연주회: 브루크너 교향곡 1번",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "경기도",
-      "city": "하남시",
-      "place": "하남문화예술회관 검단홀(대극장)",
-      "source": "culture"
-    },
-    {
-      "id": "393613",
-      "title": "제27회 유니버설발레아카데미 발레축제",
-      "type": "무용/발레",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "광진구",
-      "place": "나루아트센터 대공연장",
-      "source": "culture"
-    },
-    {
-      "id": "391671",
-      "title": "제8회 손정민 피리 독주회, 화탐확-취: 현",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-23",
-      "end_date": "2026-08-23",
-      "region": "서울특별시",
-      "city": "서초구",
-      "place": "국립국악원 우면당",
-      "source": "culture"
-    },
     {
       "id": "383663",
       "title": "공포스릴러 연극 <시그널>",
@@ -1120,6 +40,78 @@
       "region": "서울특별시",
       "city": "종로구",
       "place": "세종문화회관 세종S씨어터",
+      "source": "culture"
+    },
+    {
+      "id": "390519",
+      "title": "김유빈 & 리처드 이가 듀오 리사이틀",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-24",
+      "end_date": "2026-08-24",
+      "region": "서울특별시",
+      "city": "송파구",
+      "place": "롯데콘서트홀",
+      "source": "culture"
+    },
+    {
+      "id": "393543",
+      "title": "뮤지컬 <오디세아:키르케의 섬> 쇼케이스",
+      "type": "뮤지컬/오페라",
+      "service_type": "공연",
+      "start_date": "2026-08-24",
+      "end_date": "2026-08-24",
+      "region": "서울특별시",
+      "city": "강남구",
+      "place": "KT&G 상상마당 대치아트홀",
+      "source": "culture"
+    },
+    {
+      "id": "390534",
+      "title": "박슬기 첼로 독주회",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-24",
+      "end_date": "2026-08-24",
+      "region": "서울특별시",
+      "city": "서대문구",
+      "place": "금호아트홀 연세",
+      "source": "culture"
+    },
+    {
+      "id": "392982",
+      "title": "영화 상영 <딸기와 초콜릿>",
+      "type": "교육/체험",
+      "service_type": "교육/체험",
+      "start_date": "2026-08-24",
+      "end_date": "2026-08-24",
+      "region": "서울특별시",
+      "city": "중구",
+      "place": "",
+      "source": "culture"
+    },
+    {
+      "id": "393530",
+      "title": "제2회 에티카 앙상블 정기 연주회",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-24",
+      "end_date": "2026-08-24",
+      "region": "서울특별시",
+      "city": "종로구",
+      "place": "세종문화회관 세종체임버홀",
+      "source": "culture"
+    },
+    {
+      "id": "390696",
+      "title": "코리안 영 아티스트 시리즈 Ⅵ, 배재성 피아노 리사이틀",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-24",
+      "end_date": "2026-08-24",
+      "region": "서울특별시",
+      "city": "중구",
+      "place": "명동대성당 파밀리아 채플",
       "source": "culture"
     },
     {
@@ -1324,6 +316,18 @@
       "region": "서울특별시",
       "city": "강남구",
       "place": "경운박물관",
+      "source": "culture"
+    },
+    {
+      "id": "392516",
+      "title": "《SPECTRUM OF HAPPINESS: 1990s Domestic Palette》",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-08-24",
+      "end_date": "2026-08-27",
+      "region": "서울특별시",
+      "city": "마포구",
+      "place": "갤러리 지하",
       "source": "culture"
     },
     {
@@ -1579,8 +583,20 @@
       "source": "culture"
     },
     {
-      "id": "394169",
-      "title": "다음 장:면",
+      "id": "394807",
+      "title": "《변수의 풍경》",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-08-12",
+      "end_date": "2026-08-29",
+      "region": "서울특별시",
+      "city": "용산구",
+      "place": "인가희갤러리",
+      "source": "culture"
+    },
+    {
+      "id": "394609",
+      "title": "이상덕 개인전 《다음 장:면》",
       "type": "전시",
       "service_type": "전시",
       "start_date": "2026-08-12",
@@ -2419,6 +1435,18 @@
       "source": "culture"
     },
     {
+      "id": "394611",
+      "title": "[청주 갤러리 원] A관 김다겸 개인전 \"일상의 바다\"",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-08-19",
+      "end_date": "2026-08-30",
+      "region": "충청북도",
+      "city": "청주시",
+      "place": "CGV청주(서문) 갤러리원 1층",
+      "source": "culture"
+    },
+    {
       "id": "392458",
       "title": "\"제12언어연극스튜디오 스무돌!\" 기념공연 <S고원에서>",
       "type": "연극",
@@ -2455,6 +1483,30 @@
       "source": "culture"
     },
     {
+      "id": "390485",
+      "title": "인간동물들",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-08-21",
+      "end_date": "2026-08-30",
+      "region": "서울특별시",
+      "city": "성북구",
+      "place": "여행자극장",
+      "source": "culture"
+    },
+    {
+      "id": "394612",
+      "title": "[청주 갤러리 원] B관 청주 공예협회전\"﻿초대작가전\"",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-08-22",
+      "end_date": "2026-08-30",
+      "region": "충청북도",
+      "city": "청주시",
+      "place": "CGV청주(서문) 갤러리원 1층",
+      "source": "culture"
+    },
+    {
       "id": "390036",
       "title": "[춘천] 꿈틀꿈틀 움직이는 애벌레",
       "type": "연극",
@@ -2476,6 +1528,18 @@
       "region": "서울특별시",
       "city": "도봉구",
       "place": "",
+      "source": "culture"
+    },
+    {
+      "id": "393833",
+      "title": "[부산] 좋아하고있어",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-08-24",
+      "end_date": "2026-08-30",
+      "region": "부산광역시",
+      "city": "남구",
+      "place": "공간소극장 [대연역]",
       "source": "culture"
     },
     {
@@ -3040,6 +2104,18 @@
       "region": "",
       "city": "",
       "place": "아트허브 온라인 갤러리(ARTHUB Online Gallery)",
+      "source": "culture"
+    },
+    {
+      "id": "393062",
+      "title": "PARALLAX(시차): Where We Meet",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-08-24",
+      "end_date": "2026-09-12",
+      "region": "서울특별시",
+      "city": "용산구",
+      "place": "용산문화재단",
       "source": "culture"
     },
     {
@@ -4771,6 +3847,18 @@
       "source": "culture"
     },
     {
+      "id": "390865",
+      "title": "[대학로] 카페인",
+      "type": "뮤지컬/오페라",
+      "service_type": "공연",
+      "start_date": "2026-08-20",
+      "end_date": "2026-10-25",
+      "region": "서울특별시",
+      "city": "종로구",
+      "place": "굿씨어터",
+      "source": "culture"
+    },
+    {
       "id": "382767",
       "title": "[용인] 꼬마별이 만든 보물성",
       "type": "음악/콘서트",
@@ -4915,6 +4003,18 @@
       "source": "culture"
     },
     {
+      "id": "387195",
+      "title": "2026 새빛문화예술클럽 <시민의 메아리>",
+      "type": "행사/축제",
+      "service_type": "행사/축제",
+      "start_date": "2026-05-01",
+      "end_date": "2026-10-31",
+      "region": "경기도",
+      "city": "수원시",
+      "place": "정조테마공연장 어울무대",
+      "source": "culture"
+    },
+    {
       "id": "382397",
       "title": "2026 수주문학관 기획전시 <술로 자라서 글에 살고>展",
       "type": "전시",
@@ -4996,6 +4096,18 @@
       "region": "경기도",
       "city": "이천시",
       "place": "이천문화재단",
+      "source": "culture"
+    },
+    {
+      "id": "387490",
+      "title": "2026 화성행궁 야간개장",
+      "type": "행사/축제",
+      "service_type": "행사/축제",
+      "start_date": "2026-05-01",
+      "end_date": "2026-11-01",
+      "region": "경기도",
+      "city": "수원시 팔달구",
+      "place": "화성행궁",
       "source": "culture"
     },
     {
@@ -5181,6 +4293,18 @@
     {
       "id": "390190",
       "title": "2026 문화예술교육사 현장역량강화사업 <그린마인드>",
+      "type": "교육/체험",
+      "service_type": "교육/체험",
+      "start_date": "2026-08-22",
+      "end_date": "2026-11-07",
+      "region": "광주광역시",
+      "city": "동구",
+      "place": "",
+      "source": "culture"
+    },
+    {
+      "id": "394707",
+      "title": "<그린마인드> 문화예술교육 프로그램",
       "type": "교육/체험",
       "service_type": "교육/체험",
       "start_date": "2026-08-22",
@@ -5419,114 +4543,6 @@
       "source": "culture"
     },
     {
-      "id": "390519",
-      "title": "김유빈 & 리처드 이가 듀오 리사이틀",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-24",
-      "end_date": "2026-08-24",
-      "region": "서울특별시",
-      "city": "송파구",
-      "place": "롯데콘서트홀",
-      "source": "culture"
-    },
-    {
-      "id": "393543",
-      "title": "뮤지컬 <오디세아:키르케의 섬> 쇼케이스",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-08-24",
-      "end_date": "2026-08-24",
-      "region": "서울특별시",
-      "city": "강남구",
-      "place": "KT&G 상상마당 대치아트홀",
-      "source": "culture"
-    },
-    {
-      "id": "390534",
-      "title": "박슬기 첼로 독주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-24",
-      "end_date": "2026-08-24",
-      "region": "서울특별시",
-      "city": "서대문구",
-      "place": "금호아트홀 연세",
-      "source": "culture"
-    },
-    {
-      "id": "392982",
-      "title": "영화 상영 <딸기와 초콜릿>",
-      "type": "교육/체험",
-      "service_type": "교육/체험",
-      "start_date": "2026-08-24",
-      "end_date": "2026-08-24",
-      "region": "서울특별시",
-      "city": "중구",
-      "place": "",
-      "source": "culture"
-    },
-    {
-      "id": "393530",
-      "title": "제2회 에티카 앙상블 정기 연주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-24",
-      "end_date": "2026-08-24",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "세종문화회관 세종체임버홀",
-      "source": "culture"
-    },
-    {
-      "id": "390696",
-      "title": "코리안 영 아티스트 시리즈 Ⅵ, 배재성 피아노 리사이틀",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-24",
-      "end_date": "2026-08-24",
-      "region": "서울특별시",
-      "city": "중구",
-      "place": "명동대성당 파밀리아 채플",
-      "source": "culture"
-    },
-    {
-      "id": "392516",
-      "title": "《SPECTRUM OF HAPPINESS: 1990s Domestic Palette》",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-08-24",
-      "end_date": "2026-08-27",
-      "region": "서울특별시",
-      "city": "마포구",
-      "place": "갤러리 지하",
-      "source": "culture"
-    },
-    {
-      "id": "393833",
-      "title": "[부산] 좋아하고있어",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-08-24",
-      "end_date": "2026-08-30",
-      "region": "부산광역시",
-      "city": "남구",
-      "place": "공간소극장 [대연역]",
-      "source": "culture"
-    },
-    {
-      "id": "393062",
-      "title": "PARALLAX(시차): Where We Meet",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-08-24",
-      "end_date": "2026-09-12",
-      "region": "서울특별시",
-      "city": "용산구",
-      "place": "용산문화재단",
-      "source": "culture"
-    },
-    {
       "id": "390502",
       "title": "[공주] 렉처 콘서트III. 라틴 클래식 음악",
       "type": "음악/콘서트",
@@ -5560,6 +4576,18 @@
       "region": "대구광역시",
       "city": "수성구",
       "place": "수성아트피아",
+      "source": "culture"
+    },
+    {
+      "id": "390549",
+      "title": "[대구] 클래식 온, 이육사 시노래 축제: 강철 무지개",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-25",
+      "end_date": "2026-08-25",
+      "region": "대구광역시",
+      "city": "중구",
+      "place": "대구콘서트하우스 챔버홀(소공연장)",
       "source": "culture"
     },
     {
@@ -5656,6 +4684,18 @@
       "region": "서울특별시",
       "city": "서대문구",
       "place": "연세대학교 백주년기념관",
+      "source": "culture"
+    },
+    {
+      "id": "390710",
+      "title": "제93회 예술공감: 현(絃)의 확장, 특별한 만남의 크로스오버와 지브리",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-25",
+      "end_date": "2026-08-25",
+      "region": "부산광역시",
+      "city": "사하구",
+      "place": "을숙도문화회관 소공연장",
       "source": "culture"
     },
     {
@@ -5767,6 +4807,18 @@
       "source": "culture"
     },
     {
+      "id": "394799",
+      "title": "2026 고성 문화예술 아카데미 <쓸모있는예술>",
+      "type": "교육/체험",
+      "service_type": "교육/체험",
+      "start_date": "2026-08-25",
+      "end_date": "2026-09-29",
+      "region": "강원특별자치도",
+      "city": "",
+      "place": "",
+      "source": "culture"
+    },
+    {
       "id": "392954",
       "title": "2026 안양연고작가 발굴지원 展",
       "type": "전시",
@@ -5788,6 +4840,18 @@
       "region": "부산광역시",
       "city": "남구",
       "place": "부산문화회관 챔버홀",
+      "source": "culture"
+    },
+    {
+      "id": "390535",
+      "title": "2026 로데아트센터 마티네 콘서트 시리즈 <클래식 모닝> 레피데 트리오 ＆ Sop. 윤나영",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-26",
+      "end_date": "2026-08-26",
+      "region": "서울특별시",
+      "city": "서초구",
+      "place": "로데아트센터",
       "source": "culture"
     },
     {
@@ -5824,6 +4888,18 @@
       "region": "서울특별시",
       "city": "서초구",
       "place": "예술의전당 [서울] IBK기업은행챔버홀",
+      "source": "culture"
+    },
+    {
+      "id": "390553",
+      "title": "8월 문화가 있는 날 콘서트, 4인의 재즈 피아노 INTERPLAY",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-26",
+      "end_date": "2026-08-26",
+      "region": "경상북도",
+      "city": "안동시",
+      "place": "안동문화예술의전당 백조홀",
       "source": "culture"
     },
     {
@@ -5995,6 +5071,18 @@
       "source": "culture"
     },
     {
+      "id": "390546",
+      "title": "[인천] 알라딘과 요술램프",
+      "type": "뮤지컬/오페라",
+      "service_type": "공연",
+      "start_date": "2026-08-26",
+      "end_date": "2026-08-26",
+      "region": "인천광역시",
+      "city": "남동구",
+      "place": "인천문화예술회관 소공연장",
+      "source": "culture"
+    },
+    {
       "id": "390489",
       "title": "[인천] 직장인을 위한 퇴근길 콘서트 Ⅲ, 심포니 릴레이",
       "type": "음악/콘서트",
@@ -6043,6 +5131,18 @@
       "source": "culture"
     },
     {
+      "id": "390827",
+      "title": "[파주] 재즈를 사랑한 클래식",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-26",
+      "end_date": "2026-08-26",
+      "region": "경기도",
+      "city": "파주시",
+      "place": "솔가람아트홀 대공연장",
+      "source": "culture"
+    },
+    {
       "id": "390515",
       "title": "[평택] 정명훈 & KBS교향악단 with 김세현",
       "type": "음악/콘서트",
@@ -6052,6 +5152,18 @@
       "region": "경기도",
       "city": "평택시",
       "place": "평택아트센터",
+      "source": "culture"
+    },
+    {
+      "id": "390560",
+      "title": "[하남] 하남문화재단 문화가 있는 날 #5. 고상지 콰르텟: 열정과 탱고",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-26",
+      "end_date": "2026-08-26",
+      "region": "경기도",
+      "city": "하남시",
+      "place": "하남문화예술회관 검단홀(대극장)",
       "source": "culture"
     },
     {
@@ -6187,6 +5299,18 @@
       "source": "culture"
     },
     {
+      "id": "390556",
+      "title": "제184회 두레콘서트: 피아니스트 김설화 콘서트",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-26",
+      "end_date": "2026-08-26",
+      "region": "경기도",
+      "city": "고양시",
+      "place": "고양아람누리 새라새극장",
+      "source": "culture"
+    },
+    {
       "id": "390576",
       "title": "푸르지오아트홀 수요초대석 38, 리에종 앙상블 정기공연 Liaison Ensemble <THE BRIDGE>",
       "type": "음악/콘서트",
@@ -6199,6 +5323,18 @@
       "source": "culture"
     },
     {
+      "id": "390554",
+      "title": "힉엣눙크! 뮤직 페스티벌, 세종솔로이스츠와 이안 보스트리지의 말러",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-26",
+      "end_date": "2026-08-26",
+      "region": "서울특별시",
+      "city": "서초구",
+      "place": "예술의전당 [서울] 콘서트홀",
+      "source": "culture"
+    },
+    {
       "id": "391350",
       "title": "﻿2026 서울 국제 시각장애예술인 뮤직페스티벌(SIMB) 프레스티지 콘서트",
       "type": "음악/콘서트",
@@ -6208,6 +5344,18 @@
       "region": "서울특별시",
       "city": "영등포구",
       "place": "영산아트홀",
+      "source": "culture"
+    },
+    {
+      "id": "390508",
+      "title": "[거제] 창작뮤지컬 <거제도>",
+      "type": "뮤지컬/오페라",
+      "service_type": "공연",
+      "start_date": "2026-08-26",
+      "end_date": "2026-08-27",
+      "region": "경상남도",
+      "city": "거제시",
+      "place": "거제문화예술회관 소극장",
       "source": "culture"
     },
     {
@@ -6283,6 +5431,18 @@
       "source": "culture"
     },
     {
+      "id": "390532",
+      "title": "[수원] 아기돼지삼형제",
+      "type": "뮤지컬/오페라",
+      "service_type": "공연",
+      "start_date": "2026-08-26",
+      "end_date": "2026-09-27",
+      "region": "경기도",
+      "city": "수원시",
+      "place": "KBS 수원아트홀",
+      "source": "culture"
+    },
+    {
       "id": "392802",
       "title": "공성훈 개인전 《공성훈: 숭고의 아이러니 (The Irony of the Sublime)》",
       "type": "전시",
@@ -6331,6 +5491,18 @@
       "source": "culture"
     },
     {
+      "id": "390678",
+      "title": "[구미] 아도가 남쪽으로 온 까닭은",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-08-27",
+      "end_date": "2026-08-27",
+      "region": "경상북도",
+      "city": "구미시",
+      "place": "강동문화복지회관 천생아트홀(대공연장)",
+      "source": "culture"
+    },
+    {
       "id": "390689",
       "title": "[김해] 저녁의음악회, 조재혁 음반 발매 기념 리사이틀: 모차르트 에센셜 (8월)",
       "type": "음악/콘서트",
@@ -6340,6 +5512,18 @@
       "region": "경상남도",
       "city": "김해시",
       "place": "김해문화의전당 누리홀",
+      "source": "culture"
+    },
+    {
+      "id": "390684",
+      "title": "[부산] 대니구 로맨틱 바이올린",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-27",
+      "end_date": "2026-08-27",
+      "region": "부산광역시",
+      "city": "해운대구",
+      "place": "해운대문화회관 해운홀",
       "source": "culture"
     },
     {
@@ -6379,6 +5563,18 @@
       "source": "culture"
     },
     {
+      "id": "390685",
+      "title": "[옥천] 다시, 민들레",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-08-27",
+      "end_date": "2026-08-27",
+      "region": "충청북도",
+      "city": "옥천군",
+      "place": "옥천문화예술회관",
+      "source": "culture"
+    },
+    {
       "id": "392165",
       "title": "[장흥] 국립국악원, 연희-판: 흥으로 잇는 세상",
       "type": "음악/콘서트",
@@ -6388,6 +5584,18 @@
       "region": "전라남도",
       "city": "장흥군",
       "place": "장흥문화예술회관 대공연장",
+      "source": "culture"
+    },
+    {
+      "id": "390676",
+      "title": "[춘천] 그해 6월, 이름없는 별이되어",
+      "type": "무용/발레",
+      "service_type": "공연",
+      "start_date": "2026-08-27",
+      "end_date": "2026-08-27",
+      "region": "강원특별자치도",
+      "city": "춘천시",
+      "place": "춘천문화예술회관 공연장",
       "source": "culture"
     },
     {
@@ -6463,6 +5671,18 @@
       "source": "culture"
     },
     {
+      "id": "390681",
+      "title": "목요예술무대 II. 우리동네 명작극장, 록산느를 위한 발라드 (영상화)",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-08-27",
+      "end_date": "2026-08-27",
+      "region": "서울특별시",
+      "city": "강동구",
+      "place": "강동아트센터 소극장 드림",
+      "source": "culture"
+    },
+    {
       "id": "392209",
       "title": "배리어 프리 & 센서리-프렌들리 음악회: 감각의 숲에서 피터를 만나다",
       "type": "음악/콘서트",
@@ -6484,6 +5704,30 @@
       "region": "서울특별시",
       "city": "동대문구",
       "place": "김희수아트센터 SPACE 1",
+      "source": "culture"
+    },
+    {
+      "id": "390692",
+      "title": "아름다운 목요일 영 오디세이: 모차르트, Ⅳ. 이정우 & 김아인 Piano",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-27",
+      "end_date": "2026-08-27",
+      "region": "서울특별시",
+      "city": "서대문구",
+      "place": "금호아트홀 연세",
+      "source": "culture"
+    },
+    {
+      "id": "390756",
+      "title": "앙상블 12가사",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-27",
+      "end_date": "2026-08-27",
+      "region": "서울특별시",
+      "city": "서초구",
+      "place": "국립국악원 우면당",
       "source": "culture"
     },
     {
@@ -6631,6 +5875,30 @@
       "source": "culture"
     },
     {
+      "id": "390666",
+      "title": "[창원] 오즈의 의류수거함",
+      "type": "뮤지컬/오페라",
+      "service_type": "공연",
+      "start_date": "2026-08-27",
+      "end_date": "2026-08-28",
+      "region": "경상남도",
+      "city": "창원시",
+      "place": "3.15아트센터 소극장",
+      "source": "culture"
+    },
+    {
+      "id": "390690",
+      "title": "서울시합창단, 한여름의 메시아",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-27",
+      "end_date": "2026-08-28",
+      "region": "서울특별시",
+      "city": "종로구",
+      "place": "세종문화회관 세종체임버홀",
+      "source": "culture"
+    },
+    {
       "id": "384343",
       "title": "한여름의 메시아",
       "type": "음악/콘서트",
@@ -6640,6 +5908,42 @@
       "region": "서울특별시",
       "city": "종로구",
       "place": "세종체임버홀",
+      "source": "culture"
+    },
+    {
+      "id": "394748",
+      "title": "기억의 시선",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-08-27",
+      "end_date": "2026-08-29",
+      "region": "서울특별시",
+      "city": "영등포구",
+      "place": "어반플루토",
+      "source": "culture"
+    },
+    {
+      "id": "390628",
+      "title": "제4회 강진하맥축제",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-27",
+      "end_date": "2026-08-29",
+      "region": "전라남도",
+      "city": "강진군",
+      "place": "강진종합운동장",
+      "source": "culture"
+    },
+    {
+      "id": "390739",
+      "title": "[대학로] EBEN: 다윗, 무기를 든 소년",
+      "type": "뮤지컬/오페라",
+      "service_type": "공연",
+      "start_date": "2026-08-27",
+      "end_date": "2026-08-30",
+      "region": "서울특별시",
+      "city": "종로구",
+      "place": "효천아트센터 그라운드씬",
       "source": "culture"
     },
     {
@@ -6823,6 +6127,18 @@
       "source": "culture"
     },
     {
+      "id": "390816",
+      "title": "[부산] 서머 오르간 시리즈, 신동일 & 김효영 듀오 콘서트",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-28",
+      "region": "부산광역시",
+      "city": "부산진구",
+      "place": "부산콘서트홀",
+      "source": "culture"
+    },
+    {
       "id": "392205",
       "title": "[삼척] 클래식 마스터피스 시리즈, 그랜드필하모닉오케스트라 & 백건우",
       "type": "음악/콘서트",
@@ -6844,6 +6160,18 @@
       "region": "경기도",
       "city": "성남시",
       "place": "성남아트센터 콘서트홀",
+      "source": "culture"
+    },
+    {
+      "id": "390837",
+      "title": "[세종] 다양한 클래식 시리즈 Ⅱ. 베토벤의 밤",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-28",
+      "region": "세종특별자치시",
+      "city": "세종시",
+      "place": "세종예술의전당 대공연장",
       "source": "culture"
     },
     {
@@ -6871,6 +6199,18 @@
       "source": "culture"
     },
     {
+      "id": "390847",
+      "title": "[의정부] 개굴개굴 고래고래",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-28",
+      "region": "경기도",
+      "city": "의정부시",
+      "place": "의정부예술의전당 소극장",
+      "source": "culture"
+    },
+    {
       "id": "392344",
       "title": "[전주] 모래위에 피는 K-MUSIC",
       "type": "음악/콘서트",
@@ -6883,6 +6223,18 @@
       "source": "culture"
     },
     {
+      "id": "390831",
+      "title": "[천안] 루소 오페라, 마을 점쟁이",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-28",
+      "region": "충청남도",
+      "city": "천안시",
+      "place": "천안예술의전당 소공연장",
+      "source": "culture"
+    },
+    {
       "id": "393824",
       "title": "[파주] 파주 윈드 오케스트라와 함께하는 Jazz Soul Ensemble",
       "type": "음악/콘서트",
@@ -6892,6 +6244,18 @@
       "region": "경기도",
       "city": "파주시",
       "place": "솔가람아트홀 대공연장",
+      "source": "culture"
+    },
+    {
+      "id": "390870",
+      "title": "국악그룹 도시락과 함께하는 토끼의 간을 찾아라",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-28",
+      "region": "부산광역시",
+      "city": "사하구",
+      "place": "을숙도문화회관 소공연장",
       "source": "culture"
     },
     {
@@ -6940,6 +6304,30 @@
       "region": "강원특별자치도",
       "city": "",
       "place": "",
+      "source": "culture"
+    },
+    {
+      "id": "390856",
+      "title": "베토벤 교향곡 x 두 대의 피아노 #2",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-28",
+      "region": "서울특별시",
+      "city": "서초구",
+      "place": "예술의전당 [서울]",
+      "source": "culture"
+    },
+    {
+      "id": "390771",
+      "title": "사유의 정재",
+      "type": "무용/발레",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-28",
+      "region": "서울특별시",
+      "city": "성동구",
+      "place": "성수아트홀(성수문화복지회관)",
       "source": "culture"
     },
     {
@@ -7027,6 +6415,18 @@
       "source": "culture"
     },
     {
+      "id": "390775",
+      "title": "2026 STAGE 100: 연극제, 외투",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-29",
+      "region": "서울특별시",
+      "city": "종로구",
+      "place": "NC문화재단 홀",
+      "source": "culture"
+    },
+    {
       "id": "392283",
       "title": "2026 서울시립 미술아카이브 주제연구포럼 <미술과 문학>",
       "type": "교육/체험",
@@ -7051,6 +6451,78 @@
       "source": "culture"
     },
     {
+      "id": "390772",
+      "title": "[강릉] 까만 인절미",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-29",
+      "region": "강원특별자치도",
+      "city": "강릉시",
+      "place": "강릉아트센터",
+      "source": "culture"
+    },
+    {
+      "id": "390833",
+      "title": "[대구] 베니스의 상인",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-29",
+      "region": "대구광역시",
+      "city": "달서구",
+      "place": "계명아트센터",
+      "source": "culture"
+    },
+    {
+      "id": "390828",
+      "title": "[대구] 봉산공연창작소 Ⅲ. 쇼케이스 북성로 사운드스케이프 & 스트릿댄스쇼 <철의 리듬 (Rhythm of Iron)>",
+      "type": "무용/발레",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-29",
+      "region": "대구광역시",
+      "city": "중구",
+      "place": "봉산문화회관 스페이스라온",
+      "source": "culture"
+    },
+    {
+      "id": "390861",
+      "title": "[성남] 2026 연극만원4, 들꽃",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-29",
+      "region": "경기도",
+      "city": "성남시",
+      "place": "성남아트센터 앙상블씨어터",
+      "source": "culture"
+    },
+    {
+      "id": "390853",
+      "title": "[포항] 뮤지컬 더 픽션",
+      "type": "뮤지컬/오페라",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-29",
+      "region": "경상북도",
+      "city": "포항시",
+      "place": "포항시청 대잠홀",
+      "source": "culture"
+    },
+    {
+      "id": "390846",
+      "title": "시그니처 대전, 콘서트 오페라: 피가로의 결혼",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-29",
+      "region": "대전광역시",
+      "city": "서구",
+      "place": "대전예술의전당 앙상블홀",
+      "source": "culture"
+    },
+    {
       "id": "392935",
       "title": "판소리 <긴긴밤>",
       "type": "국악",
@@ -7072,6 +6544,18 @@
       "region": "경기도",
       "city": "하남시",
       "place": "스타필드 하남 센트럴 아트리움",
+      "source": "culture"
+    },
+    {
+      "id": "390857",
+      "title": "[부산] 그의 하루",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-30",
+      "region": "부산광역시",
+      "city": "남구",
+      "place": "부산문화회관 사랑채극장(소극장)",
       "source": "culture"
     },
     {
@@ -7687,18 +7171,6 @@
       "source": "culture"
     },
     {
-      "id": "391186",
-      "title": "[대구] 김수지 바이올린 독주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-30",
-      "end_date": "2026-08-30",
-      "region": "대구광역시",
-      "city": "중구",
-      "place": "대구콘서트하우스 그랜드홀(대공연장)",
-      "source": "culture"
-    },
-    {
       "id": "394430",
       "title": "[대구] 류상열 플루트 독주회: 로베르트 슈만 서거 170 주년 기념",
       "type": "음악/콘서트",
@@ -7732,18 +7204,6 @@
       "region": "서울특별시",
       "city": "강남구",
       "place": "거암아트홀",
-      "source": "culture"
-    },
-    {
-      "id": "392651",
-      "title": "[대전] 제6회 정시은 바이올린 독주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-30",
-      "end_date": "2026-08-30",
-      "region": "대전광역시",
-      "city": "서구",
-      "place": "대전시립연정국악원 작은마당",
       "source": "culture"
     },
     {
@@ -7855,30 +7315,6 @@
       "source": "culture"
     },
     {
-      "id": "391217",
-      "title": "김도연 피아노 독주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-30",
-      "end_date": "2026-08-30",
-      "region": "서울특별시",
-      "city": "서초구",
-      "place": "예술의전당 [서울] 인춘아트홀",
-      "source": "culture"
-    },
-    {
-      "id": "387284",
-      "title": "박수현 피아노 독주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-30",
-      "end_date": "2026-08-30",
-      "region": "서울특별시",
-      "city": "영등포구",
-      "place": "영산아트홀",
-      "source": "culture"
-    },
-    {
       "id": "391708",
       "title": "박찬식 바이올린 독주회: Reframe",
       "type": "음악/콘서트",
@@ -7891,18 +7327,6 @@
       "source": "culture"
     },
     {
-      "id": "394450",
-      "title": "밤의 오브제들: 오브제 콰르텟 연주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-30",
-      "end_date": "2026-08-30",
-      "region": "서울특별시",
-      "city": "서대문구",
-      "place": "금호아트홀 연세",
-      "source": "culture"
-    },
-    {
       "id": "392108",
       "title": "이예린 플루트 독주회, 숨결이 노래가 되다: From Myth to Jazz",
       "type": "음악/콘서트",
@@ -7912,18 +7336,6 @@
       "region": "서울특별시",
       "city": "서초구",
       "place": "예술의전당 [서울] 리사이틀홀",
-      "source": "culture"
-    },
-    {
-      "id": "391187",
-      "title": "제10회 KBS교향악단과 함께하는 여수음악제, 특별연주회 Ⅰ. 라포엠의 Love Rhapsody",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-30",
-      "end_date": "2026-08-30",
-      "region": "전라남도",
-      "city": "여수시",
-      "place": "예울마루",
       "source": "culture"
     },
     {
@@ -7948,18 +7360,6 @@
       "region": "서울특별시",
       "city": "서초구",
       "place": "예술의전당 [서울] 콘서트홀",
-      "source": "culture"
-    },
-    {
-      "id": "391452",
-      "title": "최현호 피아노 독주회: 베토벤 32 피아노 소나타 전곡연주 시리즈 Ⅱ",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-08-30",
-      "end_date": "2026-08-30",
-      "region": "서울특별시",
-      "city": "서대문구",
-      "place": "금호아트홀 연세",
       "source": "culture"
     },
     {
@@ -8227,6 +7627,18 @@
       "source": "culture"
     },
     {
+      "id": "394616",
+      "title": "공존의 경계에 흐르다: 파괴와 생성, 그리고 시선의 궤적",
+      "type": "전시",
+      "service_type": "공연",
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-10",
+      "region": "부산광역시",
+      "city": "금정구",
+      "place": "복합문화예술공간MERGE",
+      "source": "culture"
+    },
+    {
       "id": "393418",
       "title": "신성아 개인전 “상상 : Imagination”",
       "type": "전시",
@@ -8236,6 +7648,18 @@
       "region": "부산광역시",
       "city": "금정구",
       "place": "갤러리 스페이스포포",
+      "source": "culture"
+    },
+    {
+      "id": "394753",
+      "title": "[서울시립과학관]  2026 과학관 성인교육 '식물 아뜰리에: 관찰과 표본'",
+      "type": "교육/체험",
+      "service_type": "교육/체험",
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-15",
+      "region": "서울특별시",
+      "city": "노원구",
+      "place": "",
       "source": "culture"
     },
     {
@@ -8308,6 +7732,18 @@
       "region": "서울특별시",
       "city": "서대문구",
       "place": "금호아트홀 연세",
+      "source": "culture"
+    },
+    {
+      "id": "394808",
+      "title": "광주의 호흡",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-09-02",
+      "end_date": "2026-09-02",
+      "region": "광주광역시",
+      "city": "동구",
+      "place": "보헤미안 소극장",
       "source": "culture"
     },
     {
@@ -9355,6 +8791,18 @@
       "source": "culture"
     },
     {
+      "id": "394757",
+      "title": "배병규 개인전 | 하늘 아래",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-09-05",
+      "end_date": "2026-10-04",
+      "region": "경기도",
+      "city": "고양시",
+      "place": "마리나갤러리",
+      "source": "culture"
+    },
+    {
       "id": "393102",
       "title": "토요국악동화",
       "type": "국악",
@@ -9535,6 +8983,18 @@
       "source": "culture"
     },
     {
+      "id": "393275",
+      "title": "제4회 코트뮤 정기연주회 - 가야금병창 콘서트 <Ongo>",
+      "type": "국악",
+      "service_type": "공연",
+      "start_date": "2026-09-06",
+      "end_date": "2026-09-06",
+      "region": "서울특별시",
+      "city": "서초구",
+      "place": "국립국악원 풍류사랑방",
+      "source": "culture"
+    },
+    {
       "id": "394448",
       "title": "한국가야금연주가협회 제13회 정기연주회",
       "type": "음악/콘서트",
@@ -9616,6 +9076,18 @@
       "region": "서울특별시",
       "city": "중구",
       "place": "국립정동극장 세실",
+      "source": "culture"
+    },
+    {
+      "id": "394712",
+      "title": "[서울남산국악당] 춤추는 여자들 <당신은 지금 바비레따에 살고 있군요 ver.2>",
+      "type": "국악",
+      "service_type": "공연",
+      "start_date": "2026-09-07",
+      "end_date": "2026-09-21",
+      "region": "서울특별시",
+      "city": "중구",
+      "place": "남산골한옥마을 서울남산국악당 야외마당",
       "source": "culture"
     },
     {
@@ -9736,6 +9208,18 @@
       "region": "서울특별시",
       "city": "서대문구",
       "place": "금호아트홀 연세",
+      "source": "culture"
+    },
+    {
+      "id": "394678",
+      "title": "제20회 한국 교수 콰이어 정기 연주회",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-09-08",
+      "end_date": "2026-09-08",
+      "region": "서울특별시",
+      "city": "서대문구",
+      "place": "연세대학교 백주년기념관",
       "source": "culture"
     },
     {
@@ -10123,6 +9607,18 @@
       "source": "culture"
     },
     {
+      "id": "394790",
+      "title": "중구민을 위한 무료 영화 상영 프로그램 <목요일N씨네마> 9월",
+      "type": "교육/체험",
+      "service_type": "교육/체험",
+      "start_date": "2026-09-10",
+      "end_date": "2026-09-17",
+      "region": "서울특별시",
+      "city": "",
+      "place": "",
+      "source": "culture"
+    },
+    {
       "id": "394038",
       "title": "2026 ACC-지역 예비예술가 발굴전Ⅱ(대학)",
       "type": "전시",
@@ -10216,6 +9712,18 @@
       "region": "서울특별시",
       "city": "용산구",
       "place": "일신홀",
+      "source": "culture"
+    },
+    {
+      "id": "394614",
+      "title": "더 카로벨라앙상블 제2회 정기연주회",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-09-11",
+      "end_date": "2026-09-11",
+      "region": "대전광역시",
+      "city": "서구",
+      "place": "아트브릿지",
       "source": "culture"
     },
     {
@@ -10315,6 +9823,18 @@
       "source": "culture"
     },
     {
+      "id": "394806",
+      "title": "(사)한국하모니카리더스 제22회 대구하모니카오케스트라 정기연주회",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-09-12",
+      "end_date": "2026-09-12",
+      "region": "대구광역시",
+      "city": "동구",
+      "place": "아양아트센터 아양홀",
+      "source": "culture"
+    },
+    {
       "id": "393211",
       "title": "2026 브런치 콘서트 <9월: 스크린의 미학, 에드워드 호퍼부터 에드가 드가까지>",
       "type": "음악/콘서트",
@@ -10351,6 +9871,18 @@
       "source": "culture"
     },
     {
+      "id": "394758",
+      "title": "[국립극장 무대예술지원센터] 쏙쏙들이 페스티벌 <탭 쇼>",
+      "type": "무용/발레",
+      "service_type": "공연",
+      "start_date": "2026-09-12",
+      "end_date": "2026-09-12",
+      "region": "경기도",
+      "city": "파주시",
+      "place": "국립극장 무대예술지원센터",
+      "source": "culture"
+    },
+    {
       "id": "393574",
       "title": "[대구] 제11회 토니카 피아노 앙상블 정기 연주회",
       "type": "음악/콘서트",
@@ -10384,6 +9916,18 @@
       "region": "대전광역시",
       "city": "서구",
       "place": "대전예술의전당 앙상블홀",
+      "source": "culture"
+    },
+    {
+      "id": "394613",
+      "title": "[수봉IN기획공연] 뮤직 판타지아 : 수봉산의 잃어버린 황금 악보를 찾아라!",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-09-12",
+      "end_date": "2026-09-12",
+      "region": "인천광역시",
+      "city": "남구",
+      "place": "인천수봉문화회관 소극장",
       "source": "culture"
     },
     {
@@ -10615,6 +10159,18 @@
       "source": "culture"
     },
     {
+      "id": "394713",
+      "title": "서울남산국악당 X SIDance <회귀의 궤적>",
+      "type": "국악",
+      "service_type": "공연",
+      "start_date": "2026-09-14",
+      "end_date": "2026-09-14",
+      "region": "서울특별시",
+      "city": "중구",
+      "place": "서울남산국악당 크라운해태홀",
+      "source": "culture"
+    },
+    {
       "id": "393573",
       "title": "제4회 백세합창단 정기연주회",
       "type": "음악/콘서트",
@@ -10696,6 +10252,18 @@
       "region": "대구광역시",
       "city": "중구",
       "place": "대구콘서트하우스 그랜드홀(대공연장)",
+      "source": "culture"
+    },
+    {
+      "id": "394715",
+      "title": "서울남산국악당 X SIDance <무악(巫樂)과 만나는 몸의 자전>",
+      "type": "국악",
+      "service_type": "공연",
+      "start_date": "2026-09-16",
+      "end_date": "2026-09-16",
+      "region": "서울특별시",
+      "city": "중구",
+      "place": "남산골한옥마을 서울남산국악당 크라운해태홀",
       "source": "culture"
     },
     {
@@ -10903,6 +10471,30 @@
       "source": "culture"
     },
     {
+      "id": "394803",
+      "title": "안무가 매칭 프로젝트 제28회 생생 춤 페스티벌",
+      "type": "무용/발레",
+      "service_type": "공연",
+      "start_date": "2026-09-17",
+      "end_date": "2026-09-20",
+      "region": "경기도",
+      "city": "고양시",
+      "place": "고양아람누리 아람극장",
+      "source": "culture"
+    },
+    {
+      "id": "394759",
+      "title": "연극 <하녀들>",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-09-17",
+      "end_date": "2026-09-27",
+      "region": "서울특별시",
+      "city": "종로구",
+      "place": "나온씨어터",
+      "source": "culture"
+    },
+    {
       "id": "394037",
       "title": "식객: 맛의 뒤편",
       "type": "전시",
@@ -11095,6 +10687,18 @@
       "source": "culture"
     },
     {
+      "id": "394756",
+      "title": "2026 (재)광명문화재단 기획공연 <젤리피쉬>",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-09-19",
+      "end_date": "2026-09-19",
+      "region": "경기도",
+      "city": "광명시",
+      "place": "광명시민회관 대공연장",
+      "source": "culture"
+    },
+    {
       "id": "393305",
       "title": "2026 남해바래길 월정기걷기 '작은 소풍' 9월",
       "type": "교육/체험",
@@ -11188,6 +10792,18 @@
       "region": "서울특별시",
       "city": "광진구",
       "place": "서울어린이대공원 숲속의무대",
+      "source": "culture"
+    },
+    {
+      "id": "394716",
+      "title": "서울남산국악당 X SIDance <살아 있는 모든 순간>",
+      "type": "국악",
+      "service_type": "공연",
+      "start_date": "2026-09-19",
+      "end_date": "2026-09-19",
+      "region": "서울특별시",
+      "city": "중구",
+      "place": "서울남산국악당 크라운해태홀",
       "source": "culture"
     },
     {
@@ -11587,6 +11203,18 @@
       "source": "culture"
     },
     {
+      "id": "394781",
+      "title": "노예나 피아노 독주회",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-01",
+      "region": "서울특별시",
+      "city": "용산구",
+      "place": "일신홀",
+      "source": "culture"
+    },
+    {
       "id": "392737",
       "title": "수림뉴웨이브 2026 - 이재하 <현금제: 이중번역 (二重飜譯)>",
       "type": "국악",
@@ -11836,6 +11464,18 @@
       "region": "강원특별자치도",
       "city": "춘천시",
       "place": "춘천문화예술회관 공연장",
+      "source": "culture"
+    },
+    {
+      "id": "394813",
+      "title": "청주시립합창단 제87회 정기연주회 헨델 오라토리오 <Alexander’s Feast>",
+      "type": "뮤지컬/오페라",
+      "service_type": "공연",
+      "start_date": "2026-10-08",
+      "end_date": "2026-10-08",
+      "region": "충청북도",
+      "city": "청주시",
+      "place": "청주아트홀 (구. 청주시민회관)",
       "source": "culture"
     },
     {
@@ -12391,6 +12031,18 @@
       "source": "culture"
     },
     {
+      "id": "394610",
+      "title": "제14회 GAF시민공연예술제",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-11-12",
+      "end_date": "2026-11-28",
+      "region": "서울특별시",
+      "city": "양천구",
+      "place": "갈산문화예술센터 아이누리홀",
+      "source": "culture"
+    },
+    {
       "id": "365700",
       "title": "읽기의 기술: 종이에서 픽셀로",
       "type": "전시",
@@ -12412,6 +12064,18 @@
       "region": "경기도",
       "city": "수원시",
       "place": "경기아트센터 소극장",
+      "source": "culture"
+    },
+    {
+      "id": "367056",
+      "title": "강원의 통일신라",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-11-24",
+      "end_date": "2028-12-31",
+      "region": "강원특별자치도",
+      "city": "춘천시",
+      "place": "국립춘천박물관",
       "source": "culture"
     }
   ]

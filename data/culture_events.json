@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-28T00:41:38",
+  "updated_at": "2026-08-28T02:29:40",
   "range": {
     "start": "2026-08-28",
     "end": "2026-11-28"
   },
-  "count": 1118,
+  "count": 1122,
   "events": [
     {
       "id": "380746",
@@ -1903,6 +1903,18 @@
       "source": "culture"
     },
     {
+      "id": "390526",
+      "title": "[대구] 경로당 폰팅사건",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-08-19",
+      "end_date": "2026-08-30",
+      "region": "대구광역시",
+      "city": "중구",
+      "place": "예술극장 온",
+      "source": "culture"
+    },
+    {
       "id": "394687",
       "title": "[대학로] 입터진 배우들의 유쾌한 뮤지컬 토크 콘서트 : 입터진 라이브 Season 2",
       "type": "뮤지컬/오페라",
@@ -3031,6 +3043,18 @@
       "source": "culture"
     },
     {
+      "id": "395760",
+      "title": "2026 S1472 공간지원 기획사업 <공간드림 1472> 선정작가 전시_이찌고세연 개인전",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-08-25",
+      "end_date": "2026-09-12",
+      "region": "서울특별시",
+      "city": "관악구",
+      "place": "관천로 문화플랫폼 S1472",
+      "source": "culture"
+    },
+    {
       "id": "394039",
       "title": "바람의 길목 DMZ",
       "type": "전시",
@@ -3403,6 +3427,18 @@
       "source": "culture"
     },
     {
+      "id": "389859",
+      "title": "[성남] 마술고양이",
+      "type": "기타",
+      "service_type": "공연",
+      "start_date": "2026-08-19",
+      "end_date": "2026-09-19",
+      "region": "경기도",
+      "city": "성남시",
+      "place": "한국잡월드",
+      "source": "culture"
+    },
+    {
       "id": "394047",
       "title": "《Cloud 9》",
       "type": "전시",
@@ -3487,6 +3523,18 @@
       "source": "culture"
     },
     {
+      "id": "390804",
+      "title": "2026 선릉아트홀 제8회 전통성악 기획공연 [좌창, 깊은사랑]",
+      "type": "국악",
+      "service_type": "공연",
+      "start_date": "2026-08-20",
+      "end_date": "2026-09-20",
+      "region": "서울특별시",
+      "city": "강남구",
+      "place": "선릉아트홀",
+      "source": "culture"
+    },
+    {
       "id": "393943",
       "title": "빨래",
       "type": "뮤지컬/오페라",
@@ -3532,6 +3580,18 @@
       "region": "서울특별시",
       "city": "종로구",
       "place": "세종이야기.충무공이야기 전시장",
+      "source": "culture"
+    },
+    {
+      "id": "394051",
+      "title": "Nothing is Forever <영원한 것은 없다>",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-08-19",
+      "end_date": "2026-09-22",
+      "region": "제주특별자치도",
+      "city": "서귀포시",
+      "place": "무민랜드 제주",
       "source": "culture"
     },
     {
@@ -4132,6 +4192,18 @@
       "region": "경기도",
       "city": "부천시",
       "place": "부천체육문화센타",
+      "source": "culture"
+    },
+    {
+      "id": "390875",
+      "title": "김영헌: 프록시마",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-08-19",
+      "end_date": "2026-10-03",
+      "region": "서울특별시",
+      "city": "강남구",
+      "place": "갤러리JJ",
       "source": "culture"
     },
     {
@@ -10699,18 +10771,6 @@
       "source": "culture"
     },
     {
-      "id": "393812",
-      "title": "[화성] 피아니스트 천필우 독주회: 해설이 있는 슈만과 클라라, 그들의 사랑이 머문 선율",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-09-12",
-      "end_date": "2026-09-12",
-      "region": "경기도",
-      "city": "화성시",
-      "place": "유앤아이센터",
-      "source": "culture"
-    },
-    {
       "id": "393169",
       "title": "연극 <나는 코다입니다>",
       "type": "연극",
@@ -10768,18 +10828,6 @@
       "region": "서울특별시",
       "city": "종로구",
       "place": "아르코예술극장 대극장",
-      "source": "culture"
-    },
-    {
-      "id": "395447",
-      "title": "[2026 PLOT STAGE] 극단 주의 - 연극 <그립고 아름다운 내 별나라로 갈 수 있...을 걸?!>",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-09-12",
-      "end_date": "2026-09-13",
-      "region": "서울특별시",
-      "city": "서대문구",
-      "place": "극장 PLOT",
       "source": "culture"
     },
     {

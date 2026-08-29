@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-29T00:09:32",
+  "updated_at": "2026-08-29T02:02:57",
   "range": {
     "start": "2026-08-29",
     "end": "2026-11-29"
   },
-  "count": 1121,
+  "count": 1120,
   "events": [
     {
       "id": "372496",
@@ -5740,18 +5740,6 @@
       "region": "경기도",
       "city": "부천시",
       "place": "부천문화재단",
-      "source": "culture"
-    },
-    {
-      "id": "388950",
-      "title": "[아트센터 화이트블럭] 감각 수집가의 작업실",
-      "type": "교육/체험",
-      "service_type": "교육/체험",
-      "start_date": "2026-07-11",
-      "end_date": "2026-10-31",
-      "region": "경기도",
-      "city": "파주시",
-      "place": "",
       "source": "culture"
     },
     {

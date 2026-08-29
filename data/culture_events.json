@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-29T02:02:57",
+  "updated_at": "2026-08-29T21:36:36",
   "range": {
     "start": "2026-08-29",
     "end": "2026-11-29"
   },
-  "count": 1120,
+  "count": 1124,
   "events": [
     {
       "id": "372496",
@@ -3415,6 +3415,18 @@
       "source": "culture"
     },
     {
+      "id": "395978",
+      "title": "2026 KIAFRIEZE 특별 기획전 | 8/24-9/7, 갤러리제이원 서울",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-08-24",
+      "end_date": "2026-09-07",
+      "region": "대구광역시",
+      "city": "중구",
+      "place": "갤러리제이원",
+      "source": "culture"
+    },
+    {
       "id": "391098",
       "title": "The Earth Laughs in Flowers",
       "type": "전시",
@@ -5743,6 +5755,18 @@
       "source": "culture"
     },
     {
+      "id": "388950",
+      "title": "[아트센터 화이트블럭] 감각 수집가의 작업실",
+      "type": "교육/체험",
+      "service_type": "교육/체험",
+      "start_date": "2026-07-11",
+      "end_date": "2026-10-31",
+      "region": "경기도",
+      "city": "파주시",
+      "place": "",
+      "source": "culture"
+    },
+    {
       "id": "388748",
       "title": "2026 장애예술 거점 창작공간 운영 지원사업 「장애예술 연극 심화 프로그램」",
       "type": "교육/체험",
@@ -7723,6 +7747,18 @@
       "source": "culture"
     },
     {
+      "id": "395977",
+      "title": "2026KIAF 갤러리제이원GALLERY J. ONE | COEX, B홀51번",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-09-02",
+      "end_date": "2026-09-06",
+      "region": "대구광역시",
+      "city": "중구",
+      "place": "갤러리제이원",
+      "source": "culture"
+    },
+    {
       "id": "393925",
       "title": "두 사람의 인터내셔널",
       "type": "연극",
@@ -7744,6 +7780,18 @@
       "region": "서울특별시",
       "city": "종로구",
       "place": "나인진홀 1관 (1층)",
+      "source": "culture"
+    },
+    {
+      "id": "395976",
+      "title": "Mike Nesbit 《MEASURED RESOLVE》",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-09-02",
+      "end_date": "2026-09-18",
+      "region": "서울특별시",
+      "city": "강남구",
+      "place": "유엠 갤러리",
       "source": "culture"
     },
     {

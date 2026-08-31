@@ -689,6 +689,14 @@ h1 {
     line-height: 1.6;
 }
 
+.ad-wrap {
+    display: flex;
+    justify-content: center;
+
+    margin: 18px 0 22px;
+    min-height: 50px;
+}
+
 
 /* ------------------------------
    Footer

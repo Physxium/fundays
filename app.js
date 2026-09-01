@@ -1737,6 +1737,18 @@ async function loadData() {
     }
 }
 
+const supportLink = document.getElementById("supportLink");
+const cteeSupport = document.getElementById("cteeSupport");
+
+supportLink?.addEventListener("click", () => {
+    const bmcButton = document.getElementById("bmc-wbtn");
+
+    if (bmcButton) {
+        bmcButton.click();
+        cteeSupport.hidden = false;
+    }
+});
+
 
 /* =========================================================
    시작

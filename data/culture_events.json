@@ -1,23 +1,11 @@
 {
-  "updated_at": "2026-09-24T22:08:58",
+  "updated_at": "2026-09-25T22:07:14",
   "range": {
-    "start": "2026-09-24",
-    "end": "2026-12-24"
+    "start": "2026-09-25",
+    "end": "2026-12-25"
   },
-  "count": 965,
+  "count": 970,
   "events": [
-    {
-      "id": "395061",
-      "title": "박찬호 피아노 독주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-09-24",
-      "end_date": "2026-09-24",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "세종문화회관 세종체임버홀",
-      "source": "culture"
-    },
     {
       "id": "392287",
       "title": "《얼굴을 건너는 방법 Crossing the Surface》",
@@ -52,6 +40,42 @@
       "region": "서울특별시",
       "city": "중구",
       "place": "국립극장 하늘극장",
+      "source": "culture"
+    },
+    {
+      "id": "395873",
+      "title": "2026 국립국악원 추석공연: 휘영청 둥근달",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-09-25",
+      "end_date": "2026-09-25",
+      "region": "서울특별시",
+      "city": "서초구",
+      "place": "국립국악원 연희마당",
+      "source": "culture"
+    },
+    {
+      "id": "392826",
+      "title": "NT Live <서쪽 나라의 멋쟁이>",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-09-25",
+      "end_date": "2026-09-25",
+      "region": "서울특별시",
+      "city": "중구",
+      "place": "국립극장 해오름극장",
+      "source": "culture"
+    },
+    {
+      "id": "399075",
+      "title": "제4회 월드 판소리 페스티벌, 청년 소리꾼 판소리 100일 독공 지원사업 결과발표회 <고선화의 적벽가 완창>",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-09-25",
+      "end_date": "2026-09-25",
+      "region": "서울특별시",
+      "city": "중구",
+      "place": "서울남산국악당 크라운해태홀",
       "source": "culture"
     },
     {
@@ -184,6 +208,18 @@
       "region": "서울특별시",
       "city": "중구",
       "place": "국립극장 달오름극장",
+      "source": "culture"
+    },
+    {
+      "id": "395671",
+      "title": "국립남도국악원 토요상설: 국악이 좋다, 추석특별공연 대동장터",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-09-25",
+      "end_date": "2026-09-26",
+      "region": "전라남도",
+      "city": "진도군",
+      "place": "국립남도국악원 진악당",
       "source": "culture"
     },
     {
@@ -940,6 +976,54 @@
       "region": "전북특별자치도",
       "city": "전주시 완산구",
       "place": "국립전주박물관 옥외뜨락, 세미나실",
+      "source": "culture"
+    },
+    {
+      "id": "396285",
+      "title": "2026 예천 삼강나루주막축제",
+      "type": "행사/축제",
+      "service_type": "행사/축제",
+      "start_date": "2026-09-25",
+      "end_date": "2026-09-27",
+      "region": "경상북도",
+      "city": "예천군",
+      "place": "예천 삼강문화단지 일원",
+      "source": "culture"
+    },
+    {
+      "id": "398567",
+      "title": "[남산골한옥마을] 2026 남산골 추석축제 <남산달빛마당>",
+      "type": "행사/축제",
+      "service_type": "행사/축제",
+      "start_date": "2026-09-25",
+      "end_date": "2026-09-27",
+      "region": "서울특별시",
+      "city": "중구",
+      "place": "남산골한옥마을 일원",
+      "source": "culture"
+    },
+    {
+      "id": "399396",
+      "title": "강신일 모놀로그",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-09-25",
+      "end_date": "2026-09-27",
+      "region": "서울특별시",
+      "city": "종로구",
+      "place": "창작공간 BBB",
+      "source": "culture"
+    },
+    {
+      "id": "396505",
+      "title": "곱을락",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-09-25",
+      "end_date": "2026-09-27",
+      "region": "서울특별시",
+      "city": "서대문구",
+      "place": "연희예술극장",
       "source": "culture"
     },
     {
@@ -2380,6 +2464,18 @@
       "region": "제주특별자치도",
       "city": "제주시",
       "place": "제주도립김창열미술관",
+      "source": "culture"
+    },
+    {
+      "id": "383591",
+      "title": "[서울] 드라큘라",
+      "type": "뮤지컬/오페라",
+      "service_type": "공연",
+      "start_date": "2026-07-10",
+      "end_date": "2026-10-18",
+      "region": "서울특별시",
+      "city": "강서구",
+      "place": "LG아트센터 서울 LG SIGNATURE 홀",
       "source": "culture"
     },
     {
@@ -5359,99 +5455,51 @@
       "source": "culture"
     },
     {
-      "id": "395873",
-      "title": "2026 국립국악원 추석공연: 휘영청 둥근달",
-      "type": "음악/콘서트",
+      "id": "365902",
+      "title": "2026 소장품 상설전 《시대와 함께한 예술가, 이응노》",
+      "type": "전시",
       "service_type": "공연",
-      "start_date": "2026-09-25",
-      "end_date": "2026-09-25",
-      "region": "서울특별시",
-      "city": "서초구",
-      "place": "국립국악원 연희마당",
+      "start_date": "2026-01-16",
+      "end_date": "2026-12-25",
+      "region": "대전광역시",
+      "city": "서구",
+      "place": "대전 이응노미술관",
       "source": "culture"
     },
     {
-      "id": "392826",
-      "title": "NT Live <서쪽 나라의 멋쟁이>",
-      "type": "연극",
+      "id": "371492",
+      "title": "[송도] 마술집",
+      "type": "기타",
       "service_type": "공연",
-      "start_date": "2026-09-25",
-      "end_date": "2026-09-25",
-      "region": "서울특별시",
-      "city": "중구",
-      "place": "국립극장 해오름극장",
+      "start_date": "2026-03-27",
+      "end_date": "2026-12-25",
+      "region": "인천광역시",
+      "city": "연수구",
+      "place": "카페와안",
       "source": "culture"
     },
     {
-      "id": "399075",
-      "title": "제4회 월드 판소리 페스티벌, 청년 소리꾼 판소리 100일 독공 지원사업 결과발표회 <고선화의 적벽가 완창>",
-      "type": "음악/콘서트",
+      "id": "371992",
+      "title": "2026년 가곡클래스 수강생 모집 (ICA한국예술문화원)",
+      "type": "교육/체험",
+      "service_type": "교육/체험",
+      "start_date": "2026-04-03",
+      "end_date": "2026-12-25",
+      "region": "대전광역시",
+      "city": "유성구",
+      "place": "",
+      "source": "culture"
+    },
+    {
+      "id": "394071",
+      "title": "[대관공연] 캔들라이트 콘서트(8-12월)",
+      "type": "기타",
       "service_type": "공연",
-      "start_date": "2026-09-25",
-      "end_date": "2026-09-25",
-      "region": "서울특별시",
-      "city": "중구",
-      "place": "서울남산국악당 크라운해태홀",
-      "source": "culture"
-    },
-    {
-      "id": "395671",
-      "title": "국립남도국악원 토요상설: 국악이 좋다, 추석특별공연 대동장터",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-09-25",
-      "end_date": "2026-09-26",
-      "region": "전라남도",
-      "city": "진도군",
-      "place": "국립남도국악원 진악당",
-      "source": "culture"
-    },
-    {
-      "id": "396285",
-      "title": "2026 예천 삼강나루주막축제",
-      "type": "행사/축제",
-      "service_type": "행사/축제",
-      "start_date": "2026-09-25",
-      "end_date": "2026-09-27",
-      "region": "경상북도",
-      "city": "예천군",
-      "place": "예천 삼강문화단지 일원",
-      "source": "culture"
-    },
-    {
-      "id": "398567",
-      "title": "[남산골한옥마을] 2026 남산골 추석축제 <남산달빛마당>",
-      "type": "행사/축제",
-      "service_type": "행사/축제",
-      "start_date": "2026-09-25",
-      "end_date": "2026-09-27",
-      "region": "서울특별시",
-      "city": "중구",
-      "place": "남산골한옥마을 일원",
-      "source": "culture"
-    },
-    {
-      "id": "399396",
-      "title": "강신일 모놀로그",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-09-25",
-      "end_date": "2026-09-27",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "창작공간 BBB",
-      "source": "culture"
-    },
-    {
-      "id": "396505",
-      "title": "곱을락",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-09-25",
-      "end_date": "2026-09-27",
-      "region": "서울특별시",
-      "city": "서대문구",
-      "place": "연희예술극장",
+      "start_date": "2026-08-01",
+      "end_date": "2026-12-25",
+      "region": "광주광역시",
+      "city": "동구",
+      "place": "국립아시아문화전당 극장2",
       "source": "culture"
     },
     {
@@ -11584,6 +11632,18 @@
       "region": "서울특별시",
       "city": "강동구",
       "place": "강동아트센터 대극장 한강",
+      "source": "culture"
+    },
+    {
+      "id": "391787",
+      "title": "[대구] 2026 카즈미 타테이시 트리오 내한공연-지브리, 재즈를 만나다",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-12-25",
+      "end_date": "2026-12-25",
+      "region": "대구광역시",
+      "city": "남구",
+      "place": "대덕문화전당 드림홀",
       "source": "culture"
     }
   ]

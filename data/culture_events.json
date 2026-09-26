@@ -1,83 +1,11 @@
 {
-  "updated_at": "2026-09-25T22:07:14",
+  "updated_at": "2026-09-26T21:56:32",
   "range": {
-    "start": "2026-09-25",
-    "end": "2026-12-25"
+    "start": "2026-09-26",
+    "end": "2026-12-26"
   },
-  "count": 970,
+  "count": 967,
   "events": [
-    {
-      "id": "392287",
-      "title": "《얼굴을 건너는 방법 Crossing the Surface》",
-      "type": "전시",
-      "service_type": "전시",
-      "start_date": "2026-08-22",
-      "end_date": "2026-09-25",
-      "region": "경기도",
-      "city": "용인시",
-      "place": "안젤리미술관",
-      "source": "culture"
-    },
-    {
-      "id": "399709",
-      "title": "ONE HOUR",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-09-04",
-      "end_date": "2026-09-25",
-      "region": "부산광역시",
-      "city": "부산진구",
-      "place": "KT&G 상상마당 라이브홀 [부산] 라이브홀",
-      "source": "culture"
-    },
-    {
-      "id": "392773",
-      "title": "<추석엔 국악가요>",
-      "type": "국악",
-      "service_type": "공연",
-      "start_date": "2026-09-24",
-      "end_date": "2026-09-25",
-      "region": "서울특별시",
-      "city": "중구",
-      "place": "국립극장 하늘극장",
-      "source": "culture"
-    },
-    {
-      "id": "395873",
-      "title": "2026 국립국악원 추석공연: 휘영청 둥근달",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-09-25",
-      "end_date": "2026-09-25",
-      "region": "서울특별시",
-      "city": "서초구",
-      "place": "국립국악원 연희마당",
-      "source": "culture"
-    },
-    {
-      "id": "392826",
-      "title": "NT Live <서쪽 나라의 멋쟁이>",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-09-25",
-      "end_date": "2026-09-25",
-      "region": "서울특별시",
-      "city": "중구",
-      "place": "국립극장 해오름극장",
-      "source": "culture"
-    },
-    {
-      "id": "399075",
-      "title": "제4회 월드 판소리 페스티벌, 청년 소리꾼 판소리 100일 독공 지원사업 결과발표회 <고선화의 적벽가 완창>",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-09-25",
-      "end_date": "2026-09-25",
-      "region": "서울특별시",
-      "city": "중구",
-      "place": "서울남산국악당 크라운해태홀",
-      "source": "culture"
-    },
     {
       "id": "399708",
       "title": "다시, 낭만의 시대",
@@ -220,6 +148,90 @@
       "region": "전라남도",
       "city": "진도군",
       "place": "국립남도국악원 진악당",
+      "source": "culture"
+    },
+    {
+      "id": "392827",
+      "title": "NT Live <모두가 나의 아들>",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-26",
+      "region": "서울특별시",
+      "city": "중구",
+      "place": "국립극장 해오름극장",
+      "source": "culture"
+    },
+    {
+      "id": "398293",
+      "title": "[국립극장 무대예술지원센터] 쏙쏙들이 페스티벌 <이날치 콘서트>",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-26",
+      "region": "경기도",
+      "city": "파주시",
+      "place": "국립극장 무대예술지원센터",
+      "source": "culture"
+    },
+    {
+      "id": "395886",
+      "title": "[군산] 내 모든걸",
+      "type": "연극",
+      "service_type": "공연",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-26",
+      "region": "전북특별자치도",
+      "city": "군산시",
+      "place": "군산예술의전당 소공연장",
+      "source": "culture"
+    },
+    {
+      "id": "395691",
+      "title": "[진주] 매직버블쇼",
+      "type": "기타",
+      "service_type": "공연",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-26",
+      "region": "경상남도",
+      "city": "진주시",
+      "place": "경상대학교 칠암캠퍼스 대강당",
+      "source": "culture"
+    },
+    {
+      "id": "398478",
+      "title": "국립등대박물관 반짝이는 한가위",
+      "type": "교육/체험",
+      "service_type": "교육/체험",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-26",
+      "region": "경상북도",
+      "city": "",
+      "place": "",
+      "source": "culture"
+    },
+    {
+      "id": "395670",
+      "title": "리움챔버오케스트라, 그랜드 콘체르토 콘서트IV",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-26",
+      "region": "서울특별시",
+      "city": "송파구",
+      "place": "롯데콘서트홀",
+      "source": "culture"
+    },
+    {
+      "id": "395681",
+      "title": "이지영 플루트 독주회",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-26",
+      "region": "서울특별시",
+      "city": "종로구",
+      "place": "세종문화회관 세종체임버홀",
       "source": "culture"
     },
     {
@@ -1024,6 +1036,54 @@
       "region": "서울특별시",
       "city": "서대문구",
       "place": "연희예술극장",
+      "source": "culture"
+    },
+    {
+      "id": "395696",
+      "title": "[대전] 뮤지컬 <그날들>",
+      "type": "뮤지컬/오페라",
+      "service_type": "공연",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-27",
+      "region": "대전광역시",
+      "city": "서구",
+      "place": "대전예술의전당 아트홀",
+      "source": "culture"
+    },
+    {
+      "id": "395678",
+      "title": "[부천] 알라딘",
+      "type": "뮤지컬/오페라",
+      "service_type": "공연",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-27",
+      "region": "경기도",
+      "city": "부천시",
+      "place": "현대백화점 문화홀 [중동]",
+      "source": "culture"
+    },
+    {
+      "id": "398420",
+      "title": "국립광주박물관 2026년 한가위 체험 프로그램",
+      "type": "교육/체험",
+      "service_type": "교육/체험",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-27",
+      "region": "광주광역시",
+      "city": "",
+      "place": "",
+      "source": "culture"
+    },
+    {
+      "id": "398424",
+      "title": "국립청주박물관 2026년 추석맞이 문화행사 「추석 한마당」",
+      "type": "행사/축제",
+      "service_type": "행사/축제",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-27",
+      "region": "충청북도",
+      "city": "청주시 상당구",
+      "place": "국립청주박물관 일원",
       "source": "culture"
     },
     {
@@ -2788,6 +2848,18 @@
       "region": "서울특별시",
       "city": "종로구",
       "place": "경복궁 일원",
+      "source": "culture"
+    },
+    {
+      "id": "399949",
+      "title": "《 InnerSpace#26 》",
+      "type": "전시",
+      "service_type": "전시",
+      "start_date": "2026-09-12",
+      "end_date": "2026-10-24",
+      "region": "서울특별시",
+      "city": "용산구",
+      "place": "필 갤러리",
       "source": "culture"
     },
     {
@@ -5503,135 +5575,15 @@
       "source": "culture"
     },
     {
-      "id": "392827",
-      "title": "NT Live <모두가 나의 아들>",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-09-26",
-      "end_date": "2026-09-26",
-      "region": "서울특별시",
-      "city": "중구",
-      "place": "국립극장 해오름극장",
-      "source": "culture"
-    },
-    {
-      "id": "398293",
-      "title": "[국립극장 무대예술지원센터] 쏙쏙들이 페스티벌 <이날치 콘서트>",
+      "id": "381825",
+      "title": "[속초] 월간 하랑: 계절의 온도",
       "type": "음악/콘서트",
       "service_type": "공연",
-      "start_date": "2026-09-26",
-      "end_date": "2026-09-26",
-      "region": "경기도",
-      "city": "파주시",
-      "place": "국립극장 무대예술지원센터",
-      "source": "culture"
-    },
-    {
-      "id": "395886",
-      "title": "[군산] 내 모든걸",
-      "type": "연극",
-      "service_type": "공연",
-      "start_date": "2026-09-26",
-      "end_date": "2026-09-26",
-      "region": "전북특별자치도",
-      "city": "군산시",
-      "place": "군산예술의전당 소공연장",
-      "source": "culture"
-    },
-    {
-      "id": "395691",
-      "title": "[진주] 매직버블쇼",
-      "type": "기타",
-      "service_type": "공연",
-      "start_date": "2026-09-26",
-      "end_date": "2026-09-26",
-      "region": "경상남도",
-      "city": "진주시",
-      "place": "경상대학교 칠암캠퍼스 대강당",
-      "source": "culture"
-    },
-    {
-      "id": "398478",
-      "title": "국립등대박물관 반짝이는 한가위",
-      "type": "교육/체험",
-      "service_type": "교육/체험",
-      "start_date": "2026-09-26",
-      "end_date": "2026-09-26",
-      "region": "경상북도",
-      "city": "",
-      "place": "",
-      "source": "culture"
-    },
-    {
-      "id": "395670",
-      "title": "리움챔버오케스트라, 그랜드 콘체르토 콘서트IV",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-09-26",
-      "end_date": "2026-09-26",
-      "region": "서울특별시",
-      "city": "송파구",
-      "place": "롯데콘서트홀",
-      "source": "culture"
-    },
-    {
-      "id": "395681",
-      "title": "이지영 플루트 독주회",
-      "type": "음악/콘서트",
-      "service_type": "공연",
-      "start_date": "2026-09-26",
-      "end_date": "2026-09-26",
-      "region": "서울특별시",
-      "city": "종로구",
-      "place": "세종문화회관 세종체임버홀",
-      "source": "culture"
-    },
-    {
-      "id": "395696",
-      "title": "[대전] 뮤지컬 <그날들>",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-09-26",
-      "end_date": "2026-09-27",
-      "region": "대전광역시",
-      "city": "서구",
-      "place": "대전예술의전당 아트홀",
-      "source": "culture"
-    },
-    {
-      "id": "395678",
-      "title": "[부천] 알라딘",
-      "type": "뮤지컬/오페라",
-      "service_type": "공연",
-      "start_date": "2026-09-26",
-      "end_date": "2026-09-27",
-      "region": "경기도",
-      "city": "부천시",
-      "place": "현대백화점 문화홀 [중동]",
-      "source": "culture"
-    },
-    {
-      "id": "398420",
-      "title": "국립광주박물관 2026년 한가위 체험 프로그램",
-      "type": "교육/체험",
-      "service_type": "교육/체험",
-      "start_date": "2026-09-26",
-      "end_date": "2026-09-27",
-      "region": "광주광역시",
-      "city": "",
-      "place": "",
-      "source": "culture"
-    },
-    {
-      "id": "398424",
-      "title": "국립청주박물관 2026년 추석맞이 문화행사 「추석 한마당」",
-      "type": "행사/축제",
-      "service_type": "행사/축제",
-      "start_date": "2026-09-26",
-      "end_date": "2026-09-27",
-      "region": "충청북도",
-      "city": "청주시 상당구",
-      "place": "국립청주박물관 일원",
+      "start_date": "2026-06-27",
+      "end_date": "2026-12-26",
+      "region": "강원특별자치도",
+      "city": "속초시",
+      "place": "소극장 초속",
       "source": "culture"
     },
     {
@@ -11644,6 +11596,18 @@
       "region": "대구광역시",
       "city": "남구",
       "place": "대덕문화전당 드림홀",
+      "source": "culture"
+    },
+    {
+      "id": "392939",
+      "title": "[부산] 2026 카즈미 타테이시 트리오 내한공연-지브리, 재즈를 만나다",
+      "type": "음악/콘서트",
+      "service_type": "공연",
+      "start_date": "2026-12-26",
+      "end_date": "2026-12-26",
+      "region": "부산광역시",
+      "city": "금정구",
+      "place": "금정문화회관 대공연장(금빛누리홀)",
       "source": "culture"
     }
   ]
